@@ -1,0 +1,434 @@
+[123.html](https://github.com/user-attachments/files/24337433/123.html)
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.65">
+  <style type="text/css">
+    body {background-color: #fffef6}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 22.4px; font: 14.0px 'PingFang TC'; color: #493933; -webkit-text-stroke: #493933}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 22.4px; font: 14.0px '.Apple Color Emoji UI'; color: #493933; -webkit-text-stroke: #493933; background-color: #ffffff; background-color: rgba(255, 255, 255, 0.3)}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 19.2px; font: 14.0px 'PingFang TC'; color: #493933; -webkit-text-stroke: #493933; background-color: #ffffff; background-color: rgba(255, 255, 255, 0.4)}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 44.8px; font: 28.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 20.8px; font: 13.0px 'PingFang TC'; color: #493933; -webkit-text-stroke: #493933}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 32.0px; font: 20.0px 'Helvetica Neue'; color: #f1b485; -webkit-text-stroke: #f1b485; background-color: #f2e3d0}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 17.3px; font: 10.8px 'PingFang TC'; color: #493933; -webkit-text-stroke: #493933}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 32.0px; font: 20.0px 'PingFang TC Semibold'; color: #f1b485; -webkit-text-stroke: #f1b485; background-color: #f2e3d0}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933; min-height: 15.0px}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 32.0px; font: 20.0px '.AppleTraditionalChineseFont'; color: #f1b485; -webkit-text-stroke: #f1b485; background-color: #f2e3d0}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 19.2px; font: 14.0px 'PingFang TC'; color: #f1b485; -webkit-text-stroke: #f1b485}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 19.2px; font: 14.0px 'Helvetica Neue'; color: #88786e; -webkit-text-stroke: #88786e}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 19.2px; font: 14.0px 'PingFang TC'; color: #88786e; -webkit-text-stroke: #88786e}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.8px; font: 13.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.8px; font: 13.0px 'PingFang TC'; color: #493933; -webkit-text-stroke: #493933}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.8px; font: 13.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933; min-height: 16.0px}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.8px; font: 13.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933; background-color: #fff3e0}
+    p.p22 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 22.4px; font: 14.0px 'PingFang TC'; color: #88786e; -webkit-text-stroke: #88786e}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px 'PingFang TC Semibold'; color: #493933; -webkit-text-stroke: #493933}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 14.0px 'PingFang TC'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #f1b485}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.8px; font: 13.0px 'Helvetica Neue'; color: #88786e; -webkit-text-stroke: #88786e; background-color: #fffef6}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 22.4px; font: 14.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933; background-color: #1e80f0; min-height: 15.0px}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933; background-color: #40a33f; min-height: 15.0px}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933; background-color: #fd8508; min-height: 15.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933; background-color: #ee2b2a; min-height: 15.0px}
+    span.s1 {font: 28.0px '.Apple Color Emoji UI'; font-kerning: none}
+    span.s2 {font: 28.0px 'Helvetica Neue'; font-kerning: none}
+    span.s3 {font: 28.0px '.AppleTraditionalChineseFont'; font-kerning: none}
+    span.s4 {font: 14.0px 'Helvetica Neue'; font-kerning: none}
+    span.s5 {font-kerning: none}
+    span.s6 {font: 14.0px 'PingFang TC'; font-kerning: none}
+    span.s7 {font: 14.0px '.Apple Color Emoji UI'; font-kerning: none}
+    span.s8 {font-kerning: none; background-color: #f2e3d0}
+    span.s9 {font: 20.0px '.Apple Color Emoji UI'; font-kerning: none}
+    span.s10 {font: 20.0px '.AppleTraditionalChineseFont'; font-kerning: none}
+    span.s11 {font: 18.0px '.Apple Color Emoji UI'; font-kerning: none; background-color: #f2e3d0}
+    span.s12 {font: 18.0px '.AppleTraditionalChineseFont'; font-kerning: none; background-color: #f2e3d0}
+    span.s13 {font: 28.0px '.AppleTraditionalChineseFont'; font-kerning: none; background-color: #f2e3d0}
+    span.s14 {font: 13.0px 'Helvetica Neue'; font-kerning: none; background-color: #f2e3d0}
+    span.s15 {font: 20.0px 'Helvetica Neue'; font-kerning: none}
+    span.s16 {font: 14.0px 'Helvetica Neue'; font-kerning: none; background-color: #f2e3d0}
+    span.s17 {font: 14.0px 'PingFang TC'; font-kerning: none; background-color: #f2e3d0}
+    span.s18 {font: 12.0px '.Apple Color Emoji UI'; font-kerning: none; background-color: #fffef6}
+    span.s19 {font: 12.0px 'Helvetica Neue'; font-kerning: none; background-color: #fffef6}
+    span.s20 {font-kerning: none; background-color: #fffef6}
+    span.s21 {font: 13.0px '.AppleTraditionalChineseFont'; font-kerning: none; background-color: #fff3e0}
+    span.s22 {font-kerning: none; background-color: #fff3e0}
+    span.s23 {font: 13.0px 'PingFang TC'; font-kerning: none; background-color: #fff3e0}
+    span.s24 {font: 13.0px 'Helvetica Neue'; font-kerning: none; background-color: #fff3e0}
+    span.s25 {font: 13.0px 'PingFang TC'; font-kerning: none}
+    span.s26 {font: 12.0px '.AppleTraditionalChineseFont'; font-kerning: none; background-color: #fffef6}
+    span.s27 {font: 12.0px '.AppleTraditionalChineseFont'; font-kerning: none; background-color: #ffffff}
+    span.s28 {font: 12.0px 'Helvetica Neue'; font-kerning: none; background-color: #ffffff}
+    span.s29 {font: 13.0px '.Apple Color Emoji UI'; font-kerning: none}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 8.0px 0.0px; text-align: center; line-height: 44.8px; font: 28.0px 'PingFang TC Semibold'; color: #493933; -webkit-text-stroke: #493933"><span class="s1">🎯</span><span class="s2"><b> </b></span><span class="s3"><b>英語學習平台</b></span></h1>
+<p class="p2"><span class="s4">B1→B2 </span><span class="s5">進階課程</span><span class="s4"> | </span><span class="s5">每日</span><span class="s4">15</span><span class="s5">分鐘集中學習</span></p>
+<p class="p3"><span class="s5">👤</span><span class="s4"> </span><span class="s6">遊客</span></p>
+<p class="p4"><span class="s7">👥</span><span class="s4"> </span><span class="s5">切換用戶</span></p>
+<p class="p5"><span class="s8"><b>0</b></span></p>
+<p class="p6"><span class="s8">學習天數</span></p>
+<p class="p5"><span class="s8"><b>0</b></span></p>
+<p class="p6"><span class="s8">新單字</span></p>
+<p class="p5"><span class="s8"><b>0</b></span></p>
+<p class="p6"><span class="s8">寫作篇數</span></p>
+<p class="p5"><span class="s8"><b>0</b></span></p>
+<p class="p6"><span class="s8">連續天數</span></p>
+<p class="p7"><span class="s9">⏱️</span><span class="s5"><b> </b></span><span class="s10"><b>每日</b></span><span class="s5"><b>5-5-5</b></span><span class="s10"><b>學習方法</b></span></p>
+<h3 style="margin: 0.0px 0.0px 8.0px 0.0px; text-align: center; line-height: 28.8px; font: 18.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933"><span class="s11">📻</span><span class="s8"><b> Block 1: </b></span><span class="s12"><b>聽力輸入</b></span></h3>
+<p class="p5"><span class="s8"><b>5 </b></span><span class="s13"><b>分鐘</b></span></p>
+<p class="p6"><span class="s8">播放英文對話、</span><span class="s14">TED</span><span class="s8">演講或新聞片段</span><span class="s14"><span class="Apple-converted-space"> </span></span></p>
+<p class="p9"><span class="s8">提升聽力理解能力</span><span class="s14"><span class="Apple-converted-space"> </span></span></p>
+<h3 style="margin: 0.0px 0.0px 8.0px 0.0px; text-align: center; line-height: 28.8px; font: 18.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933"><span class="s11">🎤</span><span class="s8"><b> Block 2: </b></span><span class="s12"><b>口說輸出</b></span></h3>
+<p class="p5"><span class="s8"><b>5 </b></span><span class="s13"><b>分鐘</b></span></p>
+<p class="p6"><span class="s8">跟讀、自由演講或對話練習</span><span class="s14"><span class="Apple-converted-space"> </span></span></p>
+<p class="p9"><span class="s8">培養口說流暢度</span><span class="s14"><span class="Apple-converted-space"> </span></span></p>
+<h3 style="margin: 0.0px 0.0px 8.0px 0.0px; text-align: center; line-height: 28.8px; font: 18.0px 'Helvetica Neue'; color: #493933; -webkit-text-stroke: #493933"><span class="s11">✍️</span><span class="s8"><b> Block 3: </b></span><span class="s12"><b>寫作整合</b></span></h3>
+<p class="p5"><span class="s8"><b>5 </b></span><span class="s13"><b>分鐘</b></span></p>
+<p class="p6"><span class="s8">微寫作練習、句子組織</span><span class="s14"><span class="Apple-converted-space"> </span></span></p>
+<p class="p9"><span class="s8">強化寫作表達能力</span><span class="s14"><span class="Apple-converted-space"> </span></span></p>
+<p class="p10"><span class="s9">📅</span><span class="s15"><b> </b></span><span class="s10"><b>每週學習主題計劃</b></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p12"><span class="s9">📖</span><span class="s15"><b> B2 </b></span><span class="s5"><b>進階文法學習</b></span></p>
+<p class="p13"><span class="s8">現在完成式</span><span class="s16"> vs </span><span class="s8">過去完成式</span></p>
+<p class="p14"><span class="s17">虛擬語氣</span><span class="s8"> (If Clauses)</span></p>
+<p class="p15"><span class="s8">被動語態進階</span></p>
+<p class="p15"><span class="s8">複雜句型結構</span></p>
+<p class="p15"><span class="s8">時態綜合應用</span></p>
+<h4 style="margin: 0.0px 0.0px 8.0px 0.0px; line-height: 19.2px; font: 12.0px '.AppleTraditionalChineseFont'; color: #f1b485; -webkit-text-stroke: #f1b485"><span class="s18">📖</span><span class="s19"><b> </b></span><span class="s20"><b>現在完成式</b></span><span class="s19"><b> vs </b></span><span class="s20"><b>過去完成式</b></span></h4>
+<p class="p17"><span class="s21"><b>現在完成式</b></span><span class="s22"><b> (Present Perfect):</b> </span><span class="s23">用於描述從過去到現在仍有影響的行為。</span></p>
+<p class="p18"><span class="s21"><b>過去完成式</b></span><span class="s24"><b> (Past Perfect):</b> </span><span class="s22">用於描述比另一個過去事件更早發生的行為。</span></p>
+<p class="p19"><span class="s5"></span><br></p>
+<p class="p18"><span class="s22">例句：</span></p>
+<p class="p17"><span class="s22">• I <b>have lived</b> here for 5 years. (</span><span class="s23">我住在這裡</span><span class="s22">5</span><span class="s23">年了，現在仍住在這裡</span><span class="s22">)</span></p>
+<p class="p20"><span class="s5">• I <b>had lived</b> here for 5 years when I moved. (</span><span class="s25">我搬家前住了</span><span class="s5">5</span><span class="s25">年</span><span class="s5">)<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p10"><span class="s9">✍️</span><span class="s15"><b> </b></span><span class="s10"><b>寫作練習工作區</b></span></p>
+<p class="p13"><span class="s8">級別</span><span class="s16">1</span><span class="s8">：句子組合</span></p>
+<p class="p15"><span class="s8">級別</span><span class="s16">2</span><span class="s8">：段落寫作</span></p>
+<p class="p15"><span class="s8">級別</span><span class="s16">3</span><span class="s8">：短文創作</span></p>
+<h4 style="margin: 0.0px 0.0px 8.0px 0.0px; line-height: 19.2px; font: 12.0px 'PingFang TC Semibold'; color: #f1b485; -webkit-text-stroke: #f1b485"><span class="s18">📝</span><span class="s19"><b> </b></span><span class="s26"><b>句子組合練習</b></span></h4>
+<p class="p22"><span class="s20">將兩個簡單句子用連接詞組合成複雜句</span></p>
+<p class="p23"><span class="s27"><b>題目：</b></span><span class="s28"><span class="Apple-converted-space"> </span></span></p>
+<p class="p23"><span class="s27"><b>提示：</b></span><span class="s28"><span class="Apple-converted-space"> </span></span></p>
+<p class="p24"><span class="s5">提交檢查</span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p25"><span class="s29">💡</span><span class="s5"> </span><span class="s25">提示：使用</span><span class="s5"> because, although, when, if, unless </span><span class="s25">等連接詞</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><span class="s9">📚</span><span class="s15"><b> B2 </b></span><span class="s5"><b>進階詞彙學習</b></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p10"><span class="s9">📊</span><span class="s15"><b> </b></span><span class="s10"><b>學習進度</b></span></p>
+<p class="p26"><span class="s17">聽力理解</span><span class="s8"> (Listening)</span></p>
+<p class="p26"><span class="s8">65%</span></p>
+<p class="p27"><span class="s5"></span><br></p>
+<p class="p26"><span class="s17">口說流暢</span><span class="s8"> (Speaking)</span></p>
+<p class="p26"><span class="s8">60%</span></p>
+<p class="p28"><span class="s5"></span><br></p>
+<p class="p26"><span class="s17">閱讀理解</span><span class="s8"> (Reading)</span></p>
+<p class="p26"><span class="s8">70%</span></p>
+<p class="p29"><span class="s5"></span><br></p>
+<p class="p26"><span class="s17">寫作能力</span><span class="s8"> (Writing)</span></p>
+<p class="p26"><span class="s8">55%</span></p>
+<p class="p30"><span class="s5"></span><br></p>
+[script-to-add.html](https://github.com/user-attachments/files/24337542/script-to-add.html)
+<script>
+// ==========================================
+// 題庫資料 - 從文法數據文檔導入
+// ==========================================
+
+const grammarData = [
+  {
+    topic: '現在完成式 vs 過去完成式',
+    questions: [
+      { question: 'I _____ in this city for 10 years.', options: ['lived', 'have lived', 'had lived', 'was living'], correct: 1, explanation: '現在完成式表示從過去到現在的持續狀態。' },
+      { question: 'Before he arrived, they _____ the meeting.', options: ['started', 'have started', 'had started', 'were starting'], correct: 2, explanation: '過去完成式表示在另一個過去動作之前發生的事。' },
+      { question: 'She _____ three novels since she started writing.', options: ['writes', 'has written', 'had written', 'wrote'], correct: 1, explanation: '現在完成式表示已完成的動作。' },
+      { question: 'By the time we arrived, the movie _____ started.', options: ['has', 'have', 'had', 'was'], correct: 2, explanation: '過去完成式表示兩個過去動作的時間順序。' },
+      { question: 'I _____ that book three times already.', options: ['read', 'have read', 'had read', 'am reading'], correct: 1, explanation: '已經...表示使用現在完成式。' },
+      { question: 'They _____ the project before the deadline.', options: ['complete', 'have completed', 'had completed', 'completed'], correct: 2, explanation: '過去完成式表示更早的過去事件。' }
+    ]
+  },
+  {
+    topic: '介系詞應用',
+    questions: [
+      { question: 'The manager is responsible _____ the entire project.', options: ['in', 'for', 'at', 'on'], correct: 1, explanation: 'responsible for表示負責。' },
+      { question: 'We are looking _____ to your arrival next week.', options: ['at', 'forward', 'for', 'after'], correct: 1, explanation: 'look forward to表示期待。' },
+      { question: 'The training will be held _____ June 15th at 2 PM.', options: ['at', 'on', 'in', 'by'], correct: 1, explanation: '具體日期前用on。' },
+      { question: '_____ the budget constraints, the company still invested.', options: ['Although', 'Despite', 'Because', 'Due to'], correct: 1, explanation: 'Despite後接名詞片語。' },
+      { question: 'We succeeded _____ great effort and determination.', options: ['by', 'with', 'through', 'in'], correct: 2, explanation: 'through表示藉由。' },
+      { question: 'She is interested _____ learning new languages.', options: ['in', 'on', 'at', 'for'], correct: 0, explanation: 'interested in表示對...有興趣。' },
+      { question: 'The report focuses _____ market trends.', options: ['in', 'on', 'at', 'for'], correct: 1, explanation: 'focus on表示關注。' },
+      { question: 'I have never heard _____ this company before.', options: ['of', 'about', 'from', 'in'], correct: 0, explanation: 'hear of表示聽說。' },
+      { question: 'The employees are committed _____ the company\'s mission.', options: ['to', 'for', 'on', 'in'], correct: 0, explanation: 'committed to表示致力於。' },
+      { question: 'This decision is based _____ market research.', options: ['on', 'in', 'at', 'for'], correct: 0, explanation: 'based on表示基於。' }
+    ]
+  },
+  {
+    topic: '詞性辨析',
+    questions: [
+      { question: 'The _____ of the company has increased significantly.', options: ['growth', 'grow', 'growing', 'grows'], correct: 0, explanation: '冠詞The後需要名詞。' },
+      { question: 'The project was _____ completed before the deadline.', options: ['success', 'successfully', 'succeed', 'successful'], correct: 1, explanation: '修飾動詞需要副詞。' },
+      { question: 'We received an _____ proposal from our partner.', options: ['impress', 'impressive', 'impressed', 'impression'], correct: 1, explanation: '修飾名詞需要形容詞。' },
+      { question: 'The employee\'s _____ to the job is commendable.', options: ['commit', 'commitment', 'committed', 'commits'], correct: 1, explanation: ''s後需要名詞。' },
+      { question: 'All participants must _____ to the code of conduct.', options: ['comply', 'compliance', 'compliant', 'complied'], correct: 0, explanation: '助動詞must後用動詞原形。' },
+      { question: 'The _____ team completed the task on time.', options: ['efficiency', 'efficient', 'efficiently', 'effect'], correct: 1, explanation: '修飾名詞team需要形容詞。' },
+      { question: 'Her _____ in solving problems was impressive.', options: ['able', 'ability', 'ably', 'enable'], correct: 1, explanation: '主語後需要名詞。' },
+      { question: 'The system will _____ improve our workflow.', options: ['significant', 'significantly', 'significance', 'signify'], correct: 1, explanation: '修飾動詞improve需要副詞。' },
+      { question: 'We need to make a _____ decision quickly.', options: ['decide', 'decision', 'decisive', 'decidedly'], correct: 2, explanation: '修飾名詞decision需要形容詞。' },
+      { question: 'The _____ was clear and well-organized.', options: ['present', 'presence', 'presentation', 'presentable'], correct: 2, explanation: '主語需要名詞。' }
+    ]
+  },
+  {
+    topic: '主詞動詞一致',
+    questions: [
+      { question: 'The team _____ working on the new strategy.', options: ['are', 'is', 'have', 'has been'], correct: 1, explanation: '集體名詞team用單數。' },
+      { question: 'Neither the manager nor the employees _____ available.', options: ['is', 'are', 'was', 'be'], correct: 1, explanation: 'neither...nor與最近主詞employees一致。' },
+      { question: 'The number of applicants _____ exceeded expectations.', options: ['have', 'has', 'was', 'were'], correct: 1, explanation: 'the number of用單數。' },
+      { question: 'Each of the participants _____ received a certificate.', options: ['have', 'has', 'were', 'are'], correct: 1, explanation: 'each of用單數。' },
+      { question: 'The group _____ divided into three teams.', options: ['are', 'is', 'have', 'has'], correct: 1, explanation: '集體名詞group用單數。' },
+      { question: 'A number of employees _____ joined the program.', options: ['has', 'have', 'is', 'was'], correct: 1, explanation: 'a number of用複數。' },
+      { question: 'The majority of the budget _____ allocated.', options: ['are', 'is', 'have', 'has'], correct: 1, explanation: 'majority單獨用單數。' },
+      { question: 'Both of them _____ excellent skills.', options: ['has', 'have', 'is', 'was'], correct: 1, explanation: 'both用複數。' },
+      { question: 'Everyone in the office _____ received the memo.', options: ['have', 'has', 'are', 'were'], correct: 1, explanation: 'everyone用單數。' },
+      { question: 'The statistics _____ show a positive trend.', options: ['is', 'are', 'was', 'has'], correct: 1, explanation: 'statistics作複數用。' }
+    ]
+  },
+  {
+    topic: '分詞與形容詞',
+    questions: [
+      { question: 'The _____ results met all requirements.', options: ['expected', 'expecting', 'expect', 'expects'], correct: 0, explanation: '過去分詞修飾名詞。' },
+      { question: 'The _____ news from the CEO surprised everyone.', options: ['announcing', 'announced', 'announce', 'announces'], correct: 1, explanation: '過去分詞修飾名詞。' },
+      { question: 'We are _____ to hear about the success.', options: ['excited', 'exciting', 'excite', 'excites'], correct: 0, explanation: '人被動時用過去分詞。' },
+      { question: 'The _____ presentation impressed the investors.', options: ['compelling', 'compel', 'compelled', 'compels'], correct: 0, explanation: '現在分詞修飾名詞。' },
+      { question: 'All _____ employees will receive bonuses.', options: ['qualify', 'qualified', 'qualifying', 'qualifies'], correct: 1, explanation: '過去分詞作定語。' },
+      { question: 'The _____ documents need to be filed.', options: ['sign', 'signed', 'signing', 'signs'], correct: 1, explanation: '過去分詞表被動。' },
+      { question: 'This is a very _____ software program.', options: ['use', 'useful', 'using', 'used'], correct: 1, explanation: '形容詞修飾名詞。' },
+      { question: 'The _____ student worked very hard.', options: ['motivate', 'motivated', 'motivating', 'motivates'], correct: 1, explanation: '過去分詞表被動含義。' },
+      { question: 'The _____ workshop was very informative.', options: ['organize', 'organized', 'organizing', 'organizes'], correct: 1, explanation: '過去分詞作定語。' },
+      { question: 'The _____ children played happily.', options: ['excite', 'excited', 'exciting', 'excites'], correct: 1, explanation: '過去分詞表被動含義。' }
+    ]
+  },
+  {
+    topic: '連接詞 vs 介系詞',
+    questions: [
+      { question: '_____ the difficult circumstances, the team remained productive.', options: ['Although', 'Despite', 'However', 'Because of'], correct: 1, explanation: 'Despite是介系詞。' },
+      { question: 'We completed the task _____ it rained heavily.', options: ['despite', 'although', 'in spite of', 'because'], correct: 1, explanation: '完整子句用連接詞although。' },
+      { question: '_____ the budget increase, we cannot approve it.', options: ['In spite of', 'Even though', 'Because', 'For'], correct: 0, explanation: 'in spite of是介系詞。' },
+      { question: 'The company expanded _____ increasing demand.', options: ['because', 'due to', 'although', 'unless'], correct: 1, explanation: 'due to是介系詞短語。' },
+      { question: '_____ the rain, the event was successful.', options: ['Despite of', 'In spite of', 'Although', 'Because'], correct: 1, explanation: 'in spite of是正確短語。' },
+      { question: 'He succeeded _____ his lack of experience.', options: ['despite', 'although', 'even if', 'whereas'], correct: 0, explanation: 'despite後接名詞。' },
+      { question: 'She got the job _____ she had strong qualifications.', options: ['because of', 'because', 'due to', 'however'], correct: 1, explanation: '完整子句用because。' },
+      { question: '_____ working late, he finished the report.', options: ['By', 'Through', 'Despite', 'Unless'], correct: 2, explanation: 'despite後接動名詞。' },
+      { question: 'The project failed _____ poor planning.', options: ['because of', 'because', 'although', 'unless'], correct: 0, explanation: 'because of後接名詞。' },
+      { question: '_____ his efforts, he could not finish on time.', options: ['Despite', 'Although', 'Because', 'Unless'], correct: 0, explanation: 'despite後接名詞。' }
+    ]
+  },
+  {
+    topic: '虛擬語氣',
+    questions: [
+      { question: 'If I _____ you, I would accept the offer.', options: ['was', 'were', 'am', 'had been'], correct: 1, explanation: '虛擬語氣中使用 were，即使主語是單數。' },
+      { question: 'If you _____ harder, you would have passed.', options: ['studied', 'had studied', 'study', 'would study'], correct: 1, explanation: '第三類條件句用過去完成式。' }
+    ]
+  },
+  {
+    topic: '被動語態',
+    questions: [
+      { question: 'The project _____ by the team next week.', options: ['is completed', 'will be completed', 'was completed', 'has been completed'], correct: 1, explanation: '未來時被動語態使用 will be + past participle。' },
+      { question: 'The report _____ yesterday.', options: ['should submit', 'should be submitted', 'should submitted', 'submit'], correct: 1, explanation: '情態動詞 + be + past participle。' }
+    ]
+  },
+  {
+    topic: '複雜句型',
+    questions: [
+      { question: '_____ he would come was uncertain.', options: ['That', 'Which', 'Who', 'What'], correct: 0, explanation: '名詞子句需要用 that 引導。' },
+      { question: 'The book _____ I borrowed is excellent.', options: ['who', 'that', 'which', 'where'], correct: 1, explanation: '形容詞子句修飾名詞，用 that 或 which。' }
+    ]
+  },
+  {
+    topic: '時態綜合',
+    questions: [
+      { question: 'When I _____, she _____ cooking.', options: ['arrive, was cooking', 'arrived, was cooking', 'arrived, is cooking', 'will arrive, was cooking'], correct: 1, explanation: '過去時和過去進行式一起使用。' },
+      { question: 'By next year, I _____ here for 20 years.', options: ['will work', 'will have worked', 'have worked', 'am working'], correct: 1, explanation: '未來完成式用於表示到未來某個時間點已完成的動作。' }
+    ]
+  }
+];
+
+// ==========================================
+// 寫作練習題庫資料
+// ==========================================
+
+const writingExercisesBank = {
+  level1: [
+    { question: 'Combine: "She finished her homework. She went to play." Answer should use a conjunction.', hint: 'Use "after" or "before"' },
+    { question: 'Combine: "He studied hard. He passed the exam." Answer should use a conjunction.', hint: 'Use "so" or "because"' },
+    { question: 'Combine: "The weather was bad. We went outside anyway." Answer should use a conjunction.', hint: 'Use "although" or "even though"' },
+    { question: 'Combine: "I finished my work. I went home." Answer should use a conjunction.', hint: 'Use "after" or "when"' },
+    { question: 'Combine: "She was tired. She continued studying." Answer should use a conjunction.', hint: 'Use "though" or "despite"' }
+  ],
+  level2: [
+    { topic: 'My favorite hobby', keywords: 'enjoy, practice, improve, passion' },
+    { topic: 'A memorable travel experience', keywords: 'memorable, experience, learned, cultural' },
+    { topic: 'The role of technology in education', keywords: 'technology, learning, improve, access' },
+    { topic: 'How to manage time effectively', keywords: 'schedule, priority, focus, achieve' },
+    { topic: 'The importance of friendship', keywords: 'support, trust, loyal, meaningful' }
+  ],
+  level3: [
+    { topic: 'The importance of learning English in the digital age' },
+    { topic: 'How to balance work and personal life' },
+    { topic: 'The impact of social media on society' },
+    { topic: 'Why continuous learning is essential for success' },
+    { topic: 'Environmental protection and individual responsibility' }
+  ]
+};
+
+// ==========================================
+// 核心功能邏輯 - 整合題庫與 UI
+// ==========================================
+
+let currentGrammarIndex = 0;
+let currentQuestionIndex = 0;
+let userScore = 0;
+let totalAttempts = 0;
+
+/**
+ * 載入文法題目
+ */
+function loadGrammarQuestion() {
+  const topic = grammarData[currentGrammarIndex];
+  const question = topic.questions[currentQuestionIndex];
+  
+  const questionElement = document.getElementById('grammar-question');
+  const optionsContainer = document.getElementById('grammar-options');
+  
+  if (!questionElement || !optionsContainer) return; // 防止找不到元素
+  
+  questionElement.textContent = question.question;
+  optionsContainer.innerHTML = '';
+  
+  question.options.forEach((option, index) => {
+    const button = document.createElement('button');
+    button.className = 'option-btn';
+    button.textContent = option;
+    button.onclick = () => checkGrammarAnswer(index, question.correct, question.explanation);
+    optionsContainer.appendChild(button);
+  });
+}
+
+/**
+ * 檢查文法答案
+ */
+function checkGrammarAnswer(selected, correct, explanation) {
+  totalAttempts++;
+  
+  if (selected === correct) {
+    userScore++;
+    alert(`✅ 正確！\n\n${explanation}`);
+  } else {
+    alert(`❌ 錯誤！\n\n${explanation}`);
+  }
+  
+  // 移至下一題
+  currentQuestionIndex++;
+  if (currentQuestionIndex >= grammarData[currentGrammarIndex].questions.length) {
+    currentQuestionIndex = 0;
+    currentGrammarIndex = (currentGrammarIndex + 1) % grammarData.length;
+  }
+  
+  loadGrammarQuestion();
+}
+
+/**
+ * 載入寫作練習題
+ */
+function loadWritingExercise(level) {
+  const exercises = writingExercisesBank[level];
+  if (!exercises || exercises.length === 0) return;
+  
+  const exerciseDiv = document.getElementById('writing-exercise');
+  if (!exerciseDiv) return;
+  
+  const randomIndex = Math.floor(Math.random() * exercises.length);
+  const exercise = exercises[randomIndex];
+  
+  exerciseDiv.innerHTML = '';
+  
+  if (exercise.question) {
+    // Level 1: 句子組合
+    const questionP = document.createElement('p');
+    questionP.innerHTML = `<strong>題目：</strong> ${exercise.question}`;
+    exerciseDiv.appendChild(questionP);
+    
+    const hintP = document.createElement('p');
+    hintP.innerHTML = `<strong>提示：</strong> ${exercise.hint}`;
+    exerciseDiv.appendChild(hintP);
+  } else {
+    // Level 2 & 3: 寫作主題
+    const topicP = document.createElement('p');
+    topicP.innerHTML = `<strong>寫作主題：</strong> ${exercise.topic}`;
+    exerciseDiv.appendChild(topicP);
+    
+    if (exercise.keywords) {
+      const keywordsP = document.createElement('p');
+      keywordsP.innerHTML = `<strong>關鍵詞彙：</strong> ${exercise.keywords}`;
+      exerciseDiv.appendChild(keywordsP);
+    }
+  }
+  
+  const textarea = document.createElement('textarea');
+  textarea.id = 'writing-input';
+  textarea.placeholder = '請在此輸入你的答案...';
+  textarea.style.width = '100%';
+  textarea.style.height = '150px';
+  exerciseDiv.appendChild(textarea);
+  
+  const submitBtn = document.createElement('button');
+  submitBtn.textContent = '提交檢查';
+  submitBtn.onclick = () => submitWriting();
+  exerciseDiv.appendChild(submitBtn);
+}
+
+/**
+ * 提交寫作答案
+ */
+function submitWriting() {
+  const writingInput = document.getElementById('writing-input');
+  if (!writingInput) return;
+  
+  const userWriting = writingInput.value.trim();
+  if (!userWriting) {
+    alert('請輸入答案！');
+    return;
+  }
+  
+  alert('✅ 答案已提交！\n\n教師將進行批改評分。');
+  writingInput.value = '';
+}
+
+/**
+ * 初始化 - 頁面載入時執行
+ */
+function initializeLearningApp() {
+  // 試著載入文法題目
+  if (document.getElementById('grammar-question')) {
+    loadGrammarQuestion();
+  }
+  
+  // 綁定寫作練習按鈕事件
+  const writingBtns = document.querySelectorAll('[data-level]');
+  writingBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const level = this.getAttribute('data-level');
+      loadWritingExercise(level);
+    });
+  });
+}
+
+// 頁面載入完成後執行初始化
+document.addEventListener('DOMContentLoaded', initializeLearningApp);
+</script>
+</body>
+</html>文法
