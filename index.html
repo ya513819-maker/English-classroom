@@ -44,7 +44,7 @@
         .opt-btn.correct { background-color:#C9A876; color:white; }
         .explain { background-color:#F9F6F0; padding:8px; border-radius:6px; margin-top:6px; font-size:11px; color:#6B6B6B; display:none; }
         .explain.show { display:block; }
-        .writing-ex { background-color:#FFF5E6; padding:12px; border-radius:8px; border-left:4px solid #F0B8A8; }
+        .writing-ex { background-color:#FFF5E6; padding:12px; border-radius:8px; border-left:4px solid #F0B8A8; margin-bottom:15px; }
         .ex-label { font-weight:bold; color:#A89968; margin-bottom:8px; font-size:14px; }
         .ex-content { color:#3D3D3D; margin-bottom:10px; font-size:13px; }
         .ex-hint { background-color:#F9F6F0; padding:6px; border-radius:6px; margin-bottom:10px; font-size:11px; color:#6B6B6B; }
@@ -138,3 +138,11 @@
             <input type="text" id="newUserInput" placeholder="輸入新用戶名稱">
             <div class="modal-btns">
                 <button onclick="closeUserModal()">取消</button>
+                <button onclick="addNewUser()" class="submit-btn">創建用戶</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+// 詞彙數據 - 60個B2進階單字
+const vocabularyData =
