@@ -67,71 +67,364 @@
     </style>
 </head>
 <body>
-    <header>
-        <div><h1>🌍 英語 B1→B2 進階學習平台</h1></div>
-        <div class="header-right">
-            <span id="currentUser" style="font-weight:bold;color:#A89968;font-size:14px">未登入</span>
-            <button onclick="openUserModal()">切換用戶</button>
-        </div>
-    </header>
+<header>
+    <div><h1>🌍 英語 B1→B2 進階學習平台</h1></div>
+    <div class="header-right">
+        <span id="currentUser" style="font-weight:bold;color:#A89968;font-size:14px">未登入</span>
+        <button onclick="openUserModal()">切換用戶</button>
+    </div>
+</header>
 
-    <div class="container">
-        <div class="section">
-            <h2>📊 學習進度統計</h2>
-            <div class="stats-grid">
-                <div class="stat-card"><div class="stat-number" id="d1">0</div><div class="stat-label">學習天數</div></div>
-                <div class="stat-card"><div class="stat-number" id="d2">0</div><div class="stat-label">連續天數</div></div>
-                <div class="stat-card"><div class="stat-number" id="d3">0</div><div class="stat-label">學習單字</div></div>
-                <div class="stat-card"><div class="stat-number" id="d4">0</div><div class="stat-label">完成寫作</div></div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>⏱️ 5-5-5 日常學習方法</h2>
-            <div class="learning-blocks">
-                <div class="learning-block"><div class="block-title">👂 聽力輸入 (5分鐘)</div><div class="block-content">• 播放英文媒體<br>• 聽力練習<br>• 字幕跟讀</div></div>
-                <div class="learning-block"><div class="block-title">🗣️ 口說輸出 (5分鐘)</div><div class="block-content">• 跟讀練習<br>• 自由演講<br>• 對話練習</div></div>
-                <div class="learning-block"><div class="block-title">✍️ 寫作整合 (5分鐘)</div><div class="block-content">• 微寫作<br>• 句子組織<br>• 段落練習</div></div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>📅 每週學習主題計劃</h2>
-            <div class="learning-blocks">
-                <div class="learning-block"><div class="block-title">星期一</div><div class="block-content">商務英文 - Email、會議用語</div></div>
-                <div class="learning-block"><div class="block-title">星期二</div><div class="block-content">日常對話 - 購物、餐廳、生活</div></div>
-                <div class="learning-block"><div class="block-title">星期三</div><div class="block-content">閱讀日 - 新聞、部落格、文章</div></div>
-                <div class="learning-block"><div class="block-title">星期四</div><div class="block-content">寫作集中 - 短文、論文、段落</div></div>
-                <div class="learning-block"><div class="block-title">星期五</div><div class="block-content">口說練習 - 演講、討論、辯論</div></div>
-                <div class="learning-block"><div class="block-title">星期六</div><div class="block-content">混合複習 - 各項技能整合</div></div>
-                <div class="learning-block"><div class="block-title">星期日</div><div class="block-content">週評測 - 進度檢視與調整</div></div>
-            </div>
-        </div>
-
-        <div class="section"><h2>📚 B2 進階詞彙學習</h2><div id="vc"></div></div>
-        <div class="section"><h2>📖 B2 進階文法學習</h2><div id="gt"></div><div id="gc"></div></div>
-        <div class="section">
-            <h2>✍️ 寫作練習工作區</h2>
-            <div class="tabs" id="wt">
-                <button class="tab active" onclick="swW(0)">級別1：句子組合</button>
-                <button class="tab" onclick="swW(1)">級別2：段落寫作</button>
-                <button class="tab" onclick="swW(2)">級別3：短文創作</button>
-            </div>
-            <div id="wc"></div>
+<div class="container">
+    <div class="section">
+        <h2>📊 學習進度統計</h2>
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-number" id="d1">0</div><div class="stat-label">學習天數</div></div>
+            <div class="stat-card"><div class="stat-number" id="d2">0</div><div class="stat-label">連續天數</div></div>
+            <div class="stat-card"><div class="stat-number" id="d3">0</div><div class="stat-label">學習單字</div></div>
+            <div class="stat-card"><div class="stat-number" id="d4">0</div><div class="stat-label">完成寫作</div></div>
         </div>
     </div>
 
-    <div class="modal" id="um">
-        <div class="modal-content">
-            <h3>用戶管理</h3>
-            <div class="user-list" id="ul"></div>
-            <input id="nui" placeholder="輸入新用戶名稱" style="width:100%;padding:10px;border:2px solid #FDD9BE;border-radius:6px;margin-bottom:12px">
-            <div class="modal-btns">
-                <button onclick="closeUserModal()">取消</button>
-                <button onclick="addNewUser()" class="submit-btn">創建用戶</button>
-            </div>
+    <div class="section">
+        <h2>⏱️ 5-5-5 日常學習方法</h2>
+        <div class="learning-blocks">
+            <div class="learning-block"><div class="block-title">👂 聽力輸入 (5分鐘)</div><div class="block-content">• 播放英文媒體<br>• 聽力練習<br>• 字幕跟讀</div></div>
+            <div class="learning-block"><div class="block-title">🗣️ 口說輸出 (5分鐘)</div><div class="block-content">• 跟讀練習<br>• 自由演講<br>• 對話練習</div></div>
+            <div class="learning-block"><div class="block-title">✍️ 寫作整合 (5分鐘)</div><div class="block-content">• 微寫作<br>• 句子組織<br>• 段落練習</div></div>
         </div>
     </div>
 
-    <script>
-        const vd=
+    <div class="section">
+        <h2>📅 每週學習主題計劃</h2>
+        <div class="learning-blocks">
+            <div class="learning-block"><div class="block-title">星期一</div><div class="block-content">商務英文 - Email、會議用語</div></div>
+            <div class="learning-block"><div class="block-title">星期二</div><div class="block-content">日常對話 - 購物、餐廳、生活</div></div>
+            <div class="learning-block"><div class="block-title">星期三</div><div class="block-content">閱讀日 - 新聞、部落格、文章</div></div>
+            <div class="learning-block"><div class="block-title">星期四</div><div class="block-content">寫作集中 - 短文、論文、段落</div></div>
+            <div class="learning-block"><div class="block-title">星期五</div><div class="block-content">口說練習 - 演講、討論、辯論</div></div>
+            <div class="learning-block"><div class="block-title">星期六</div><div class="block-content">混合複習 - 各項技能整合</div></div>
+            <div class="learning-block"><div class="block-title">星期日</div><div class="block-content">週評測 - 進度檢視與調整</div></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📚 B2 進階詞彙學習</h2>
+        <div id="vc"></div>
+    </div>
+
+    <div class="section">
+        <h2>📖 B2 進階文法學習</h2>
+        <div id="gt"></div>
+        <div id="gc"></div>
+    </div>
+
+    <div class="section">
+        <h2>✍️ 寫作練習工作區</h2>
+        <div class="tabs" id="wt">
+            <button class="tab active" data-index="0">級別1：句子組合</button>
+            <button class="tab" data-index="1">級別2：段落寫作</button>
+            <button class="tab" data-index="2">級別3：短文創作</button>
+        </div>
+        <div id="wc"></div>
+    </div>
+</div>
+
+<div class="modal" id="um">
+    <div class="modal-content">
+        <h3>用戶管理</h3>
+        <div class="user-list" id="ul"></div>
+        <input id="nui" placeholder="輸入新用戶名稱">
+        <div class="modal-btns">
+            <button onclick="closeUserModal()">取消</button>
+            <button onclick="addNewUser()" class="submit-btn">創建用戶</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 假資料：B2 詞彙
+    const vocabData = [
+        {
+            word: 'significant',
+            pronunciation: '/sɪɡˈnɪf.ɪ.kənt/',
+            meaning: '重要的；顯著的',
+            example: 'There has been a significant improvement in her English.'
+        },
+        {
+            word: 'challenge',
+            pronunciation: '/ˈtʃæl.ɪndʒ/',
+            meaning: '挑戰；難題',
+            example: 'Preparing students for B2 exams can be a real challenge.'
+        }
+    ];
+
+    // 假資料：文法題
+    const grammarData = [
+        {
+            title: '一、關係子句',
+            questions: [
+                {
+                    text: 'Choose the best option: The student _____ homework was late talked to the teacher.',
+                    options: ['who', 'whose', 'which', 'that'],
+                    answer: 1,
+                    explain: '在名詞後面修飾「所有格」時，用 whose。'
+                }
+            ]
+        }
+    ];
+
+    // 假資料：寫作題
+    const writingLevels = [
+        [
+            {
+                label: '級別1：句子組合',
+                prompt: '使用 provided / challenge / improve 三個單字，寫出 2 個完整英文句子。',
+                hint: '每句至少 8 字，注意動詞時態一致。'
+            }
+        ],
+        [
+            {
+                label: '級別2：段落寫作',
+                prompt: '描述你最近一次遇到的學習挑戰，以及你如何解決它。',
+                hint: '目標 80–120 字，分 1–2 段，注意連接詞（for example, however, therefore）。'
+            }
+        ],
+        [
+            {
+                label: '級別3：短文創作',
+                prompt: '「從 B1 到 B2」：寫一篇短文分享你的學習策略與心得。',
+                hint: '目標 150–200 字，可包含開頭、發展、結尾三部分。'
+            }
+        ]
+    ];
+
+    // 簡易用戶資料（localStorage）
+    const STORAGE_KEY = 'b1b2_users_v1';
+
+    function loadUsers() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return { current: null, users: {} };
+        try {
+            return JSON.parse(raw);
+        } catch (e) {
+            return { current: null, users: {} };
+        }
+    }
+
+    function saveUsers(data) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    }
+
+    let userState = loadUsers();
+
+    function updateCurrentUserDisplay() {
+        const span = document.getElementById('currentUser');
+        span.textContent = userState.current ? userState.current : '未登入';
+    }
+
+    function openUserModal() {
+        renderUserList();
+        document.getElementById('um').classList.add('show');
+    }
+
+    function closeUserModal() {
+        document.getElementById('um').classList.remove('show');
+    }
+
+    function renderUserList() {
+        const ul = document.getElementById('ul');
+        ul.innerHTML = '';
+        const names = Object.keys(userState.users);
+        if (names.length === 0) {
+            ul.innerHTML = '<div style="font-size:12px;color:#6B6B6B">目前沒有用戶，請先建立一位。</div>';
+            return;
+        }
+        names.forEach(name => {
+            const div = document.createElement('div');
+            div.className = 'user-item';
+            div.textContent = name;
+            div.onclick = () => {
+                userState.current = name;
+                saveUsers(userState);
+                updateCurrentUserDisplay();
+                closeUserModal();
+                loadUserProgress();
+            };
+            ul.appendChild(div);
+        });
+    }
+
+    function addNewUser() {
+        const input = document.getElementById('nui');
+        const name = input.value.trim();
+        if (!name) return;
+        if (!userState.users[name]) {
+            userState.users[name] = {
+                days: 0,
+                streak: 0,
+                words: 0,
+                writings: 0
+            };
+        }
+        userState.current = name;
+        saveUsers(userState);
+        input.value = '';
+        updateCurrentUserDisplay();
+        renderUserList();
+        loadUserProgress();
+    }
+
+    function loadUserProgress() {
+        const d1 = document.getElementById('d1');
+        const d2 = document.getElementById('d2');
+        const d3 = document.getElementById('d3');
+        const d4 = document.getElementById('d4');
+
+        if (!userState.current) {
+            d1.textContent = 0;
+            d2.textContent = 0;
+            d3.textContent = 0;
+            d4.textContent = 0;
+            return;
+        }
+        const data = userState.users[userState.current] || {
+            days: 0, streak: 0, words: 0, writings: 0
+        };
+        d1.textContent = data.days;
+        d2.textContent = data.streak;
+        d3.textContent = data.words;
+        d4.textContent = data.writings;
+    }
+
+    // 詞彙區塊渲染
+    function renderVocab() {
+        const vc = document.getElementById('vc');
+        vc.innerHTML = '';
+        vocabData.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'vocab-card';
+            card.innerHTML = `
+                <div class="vocab-word">${item.word}</div>
+                <div class="vocab-pronunciation">${item.pronunciation}</div>
+                <div class="vocab-meaning">${item.meaning}</div>
+                <div class="vocab-example">${item.example}</div>
+                <button class="play-btn" type="button">播放發音（示意）</button>
+            `;
+            vc.appendChild(card);
+        });
+    }
+
+    // 文法區塊渲染
+    function renderGrammar() {
+        const gt = document.getElementById('gt');
+        const gc = document.getElementById('gc');
+        gt.innerHTML = '';
+        gc.innerHTML = '';
+
+        grammarData.forEach(section => {
+            const titleDiv = document.createElement('div');
+            titleDiv.textContent = section.title;
+            titleDiv.style.marginBottom = '10px';
+            gt.appendChild(titleDiv);
+
+            section.questions.forEach((q, idx) => {
+                const qDiv = document.createElement('div');
+                qDiv.className = 'grammar-q';
+
+                const optionsHtml = q.options.map((opt, i) => {
+                    return `<button class="opt-btn" data-index="${i}" type="button">${opt}</button>`;
+                }).join('');
+
+                qDiv.innerHTML = `
+                    <div class="q-text">Q${idx + 1}. ${q.text}</div>
+                    <div class="options">${optionsHtml}</div>
+                    <div class="explain">解說：${q.explain}</div>
+                `;
+                const btns = qDiv.querySelectorAll('.opt-btn');
+                const explain = qDiv.querySelector('.explain');
+                btns.forEach((btn, i) => {
+                    btn.addEventListener('click', () => {
+                        btns.forEach(b => b.classList.remove('correct'));
+                        if (i === q.answer) {
+                            btn.classList.add('correct');
+                        }
+                        explain.classList.add('show');
+                    });
+                });
+
+                gc.appendChild(qDiv);
+            });
+        });
+    }
+
+    // 寫作區塊渲染
+    function renderWriting(levelIndex) {
+        const wc = document.getElementById('wc');
+        wc.innerHTML = '';
+        const tasks = writingLevels[levelIndex] || [];
+        tasks.forEach((task, idx) => {
+            const div = document.createElement('div');
+            div.className = 'writing-ex';
+            div.innerHTML = `
+                <div class="ex-label">${task.label}</div>
+                <div class="ex-content">${task.prompt}</div>
+                <div class="ex-hint">${task.hint}</div>
+                <textarea data-idx="${idx}" placeholder="在此輸入你的英文回答..."></textarea>
+                <div class="word-count">目前字數：<span>0</span> words</div>
+                <button class="submit-btn" type="button">標記為完成（示意）</button>
+                <div class="feedback">已標記完成！建議請老師或同學幫忙回饋內容。</div>
+            `;
+            const textarea = div.querySelector('textarea');
+            const countSpan = div.querySelector('.word-count span');
+            const btn = div.querySelector('.submit-btn');
+            const feedback = div.querySelector('.feedback');
+
+            textarea.addEventListener('input', () => {
+                const text = textarea.value.trim();
+                const words = text ? text.split(/\s+/).length : 0;
+                countSpan.textContent = words;
+            });
+
+            btn.addEventListener('click', () => {
+                feedback.classList.add('show');
+                if (userState.current) {
+                    const user = userState.users[userState.current] || {
+                        days: 0, streak: 0, words: 0, writings: 0
+                    };
+                    user.writings += 1;
+                    userState.users[userState.current] = user;
+                    saveUsers(userState);
+                    loadUserProgress();
+                }
+            });
+
+            wc.appendChild(div);
+        });
+    }
+
+    // Tab 切換
+    function initWritingTabs() {
+        const tabContainer = document.getElementById('wt');
+        const tabs = tabContainer.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const index = parseInt(tab.getAttribute('data-index'), 10);
+                renderWriting(index);
+            });
+        });
+        // 預設顯示第 0 級別
+        renderWriting(0);
+    }
+
+    // 初始載入
+    document.addEventListener('DOMContentLoaded', () => {
+        updateCurrentUserDisplay();
+        loadUserProgress();
+        renderVocab();
+        renderGrammar();
+        initWritingTabs();
+    });
+</script
