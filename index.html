@@ -1021,18 +1021,136 @@
             ]
         };
 
-        // ===== 資料庫：文法題庫 (原 index.html 內容) =====
+        // ===== 資料庫：文法題庫（從英文資料庫合併） =====
         const grammarData = [
-            // 這裡填入你原本 index.html 中的 grammarData 陣列內容
-            // 若原檔已有，請直接貼回完整陣列
+            {
+                topic: '現在完成式 vs 過去完成式',
+                questions: [
+                    { question: 'I _____ in this city for 10 years.', options: ['lived', 'have lived', 'had lived', 'was living'], correct: 1, explanation: '現在完成式表示從過去到現在的持續狀態。' },
+                    { question: 'Before he arrived, they _____ the meeting.', options: ['started', 'have started', 'had started', 'were starting'], correct: 2, explanation: '過去完成式表示在另一個過去動作之前發生的事。' },
+                    { question: 'She _____ three novels since she started writing.', options: ['writes', 'has written', 'had written', 'wrote'], correct: 1, explanation: '現在完成式表示已完成的動作。' },
+                    { question: 'By the time we arrived, the movie _____ started.', options: ['has', 'have', 'had', 'was'], correct: 2, explanation: '過去完成式表示兩個過去動作的時間順序。' },
+                    { question: 'I _____ that book three times already.', options: ['read', 'have read', 'had read', 'am reading'], correct: 1, explanation: '已經...表示使用現在完成式。' },
+                    { question: 'They _____ the project before the deadline.', options: ['complete', 'have completed', 'had completed', 'completed'], correct: 2, explanation: '過去完成式表示更早的過去事件。' }
+                ]
+            },
+            {
+                topic: '介系詞應用',
+                questions: [
+                    { question: 'The manager is responsible _____ the entire project.', options: ['in', 'for', 'at', 'on'], correct: 1, explanation: 'responsible for表示負責。' },
+                    { question: 'We are looking _____ to your arrival next week.', options: ['at', 'forward', 'for', 'after'], correct: 1, explanation: 'look forward to表示期待。' },
+                    { question: 'The training will be held _____ June 15th at 2 PM.', options: ['at', 'on', 'in', 'by'], correct: 1, explanation: '具體日期前用on。' },
+                    { question: '_____ the budget constraints, the company still invested.', options: ['Although', 'Despite', 'Because', 'Due to'], correct: 1, explanation: 'Despite後接名詞片語。' },
+                    { question: 'We succeeded _____ great effort and determination.', options: ['by', 'with', 'through', 'in'], correct: 2, explanation: 'through表示藉由。' },
+                    { question: 'She is interested _____ learning new languages.', options: ['in', 'on', 'at', 'for'], correct: 0, explanation: 'interested in表示對...有興趣。' },
+                    { question: 'The report focuses _____ market trends.', options: ['in', 'on', 'at', 'for'], correct: 1, explanation: 'focus on表示關注。' },
+                    { question: 'I have never heard _____ this company before.', options: ['of', 'about', 'from', 'in'], correct: 0, explanation: 'hear of表示聽說。' },
+                    { question: 'The employees are committed _____ the company\'s mission.', options: ['to', 'for', 'on', 'in'], correct: 0, explanation: 'committed to表示致力於。' },
+                    { question: 'This decision is based _____ market research.', options: ['on', 'in', 'at', 'for'], correct: 0, explanation: 'based on表示基於。' }
+                ]
+            },
+            {
+                topic: '詞性辨析',
+                questions: [
+                    { question: 'The _____ of the company has increased significantly.', options: ['growth', 'grow', 'growing', 'grows'], correct: 0, explanation: '冠詞The後需要名詞。' },
+                    { question: 'The project was _____ completed before the deadline.', options: ['success', 'successfully', 'succeed', 'successful'], correct: 1, explanation: '修飾動詞需要副詞。' },
+                    { question: 'We received an _____ proposal from our partner.', options: ['impress', 'impressive', 'impressed', 'impression'], correct: 1, explanation: '修飾名詞需要形容詞。' },
+                    { question: 'The employee\'s _____ to the job is commendable.', options: ['commit', 'commitment', 'committed', 'commits'], correct: 1, explanation: '\'s後需要名詞。' },
+                    { question: 'All participants must _____ to the code of conduct.', options: ['comply', 'compliance', 'compliant', 'complied'], correct: 0, explanation: '助動詞must後用動詞原形。' },
+                    { question: 'The _____ team completed the task on time.', options: ['efficiency', 'efficient', 'efficiently', 'effect'], correct: 1, explanation: '修飾名詞team需要形容詞。' },
+                    { question: 'Her _____ in solving problems was impressive.', options: ['able', 'ability', 'ably', 'enable'], correct: 1, explanation: '主語後需要名詞。' },
+                    { question: 'The system will _____ improve our workflow.', options: ['significant', 'significantly', 'significance', 'signify'], correct: 1, explanation: '修飾動詞improve需要副詞。' },
+                    { question: 'We need to make a _____ decision quickly.', options: ['decide', 'decision', 'decisive', 'decidedly'], correct: 2, explanation: '修飾名詞decision需要形容詞。' },
+                    { question: 'The _____ was clear and well-organized.', options: ['present', 'presence', 'presentation', 'presentable'], correct: 2, explanation: '主語需要名詞。' }
+                ]
+            },
+            {
+                topic: '主詞動詞一致',
+                questions: [
+                    { question: 'The team _____ working on the new strategy.', options: ['are', 'is', 'have', 'has been'], correct: 1, explanation: '集體名詞team用單數。' },
+                    { question: 'Neither the manager nor the employees _____ available.', options: ['is', 'are', 'was', 'be'], correct: 1, explanation: 'neither...nor與最近主詞employees一致。' },
+                    { question: 'The number of applicants _____ exceeded expectations.', options: ['have', 'has', 'was', 'were'], correct: 1, explanation: 'the number of用單數。' },
+                    { question: 'Each of the participants _____ received a certificate.', options: ['have', 'has', 'were', 'are'], correct: 1, explanation: 'each of用單數。' },
+                    { question: 'The group _____ divided into three teams.', options: ['are', 'is', 'have', 'has'], correct: 1, explanation: '集體名詞group用單數。' },
+                    { question: 'A number of employees _____ joined the program.', options: ['has', 'have', 'is', 'was'], correct: 1, explanation: 'a number of用複數。' },
+                    { question: 'The majority of the budget _____ allocated.', options: ['are', 'is', 'have', 'has'], correct: 1, explanation: 'majority單獨用單數。' },
+                    { question: 'Both of them _____ excellent skills.', options: ['has', 'have', 'is', 'was'], correct: 1, explanation: 'both用複數。' },
+                    { question: 'Everyone in the office _____ received the memo.', options: ['have', 'has', 'are', 'were'], correct: 1, explanation: 'everyone用單數。' },
+                    { question: 'The statistics _____ show a positive trend.', options: ['is', 'are', 'was', 'has'], correct: 1, explanation: 'statistics作複數用。' }
+                ]
+            },
+            {
+                topic: '分詞與形容詞',
+                questions: [
+                    { question: 'The _____ results met all requirements.', options: ['expected', 'expecting', 'expect', 'expects'], correct: 0, explanation: '過去分詞修飾名詞。' },
+                    { question: 'The _____ news from the CEO surprised everyone.', options: ['announcing', 'announced', 'announce', 'announces'], correct: 1, explanation: '過去分詞修飾名詞。' },
+                    { question: 'We are _____ to hear about the success.', options: ['excited', 'exciting', 'excite', 'excites'], correct: 0, explanation: '人被動時用過去分詞。' },
+                    { question: 'The story was very _____.', options: ['interested', 'interesting', 'interest', 'interests'], correct: 1, explanation: '現在分詞修飾事物。' },
+                    { question: 'The _____ customers waited in line.', options: ['annoyed', 'annoying', 'annoy', 'annoys'], correct: 0, explanation: '過去分詞表示被惹惱的人。' },
+                    { question: 'This is an _____ opportunity for growth.', options: ['excite', 'excited', 'exciting', 'excitement'], correct: 2, explanation: '現在分詞修飾名詞，表示令人興奮的。' },
+                    { question: 'The _____ letter contained important information.', options: ['attach', 'attached', 'attaching', 'attachment'], correct: 1, explanation: '過去分詞作定語。' },
+                    { question: 'The lecture was so _____ that many students fell asleep.', options: ['boring', 'bored', 'bore', 'bores'], correct: 0, explanation: '事物用boring。' },
+                    { question: 'She felt very _____ after the long meeting.', options: ['tired', 'tiring', 'tire', 'tires'], correct: 0, explanation: '人感到疲倦用tired。' },
+                    { question: 'The _____ presentation impressed the investors.', options: ['compelling', 'compel', 'compelled', 'compels'], correct: 0, explanation: '現在分詞修飾名詞。' },
+                    { question: 'All _____ employees will receive bonuses.', options: ['qualify', 'qualified', 'qualifying', 'qualifies'], correct: 1, explanation: '過去分詞作定語。' },
+                    { question: 'The _____ documents need to be filed.', options: ['sign', 'signed', 'signing', 'signs'], correct: 1, explanation: '過去分詞表被動。' },
+                    { question: 'This is a very _____ software program.', options: ['use', 'useful', 'using', 'used'], correct: 1, explanation: '形容詞修飾名詞。' },
+                    { question: 'The _____ student worked very hard.', options: ['motivate', 'motivated', 'motivating', 'motivates'], correct: 1, explanation: '過去分詞表被動含義。' },
+                    { question: 'The _____ workshop was very informative.', options: ['organize', 'organized', 'organizing', 'organizes'], correct: 1, explanation: '過去分詞作定語。' },
+                    { question: 'The _____ children played happily.', options: ['excite', 'excited', 'exciting', 'excites'], correct: 1, explanation: '過去分詞表被動含義。' }
+                ]
+            },
+            {
+                topic: '連接詞 vs 介系詞',
+                questions: [
+                    { question: '_____ the difficult circumstances, the team remained productive.', options: ['Although', 'Despite', 'However', 'Because of'], correct: 1, explanation: 'Despite是介系詞。' },
+                    { question: 'We completed the task _____ it rained heavily.', options: ['despite', 'although', 'in spite of', 'because'], correct: 1, explanation: '完整子句用連接詞although。' },
+                    { question: '_____ the budget increase, we cannot approve it.', options: ['In spite of', 'Even though', 'Because', 'For'], correct: 0, explanation: 'in spite of是介系詞。' },
+                    { question: 'The company expanded _____ increasing demand.', options: ['because', 'due to', 'although', 'unless'], correct: 1, explanation: 'due to是介系詞短語。' },
+                    { question: '_____ the rain, the event was successful.', options: ['Despite of', 'In spite of', 'Although', 'Because'], correct: 1, explanation: 'in spite of是正確短語。' },
+                    { question: 'He succeeded _____ his lack of experience.', options: ['despite', 'although', 'even if', 'whereas'], correct: 0, explanation: 'despite後接名詞。' },
+                    { question: 'She got the job _____ she had strong qualifications.', options: ['because of', 'because', 'due to', 'however'], correct: 1, explanation: '完整子句用because。' },
+                    { question: '_____ working late, he finished the report.', options: ['By', 'Through', 'Despite', 'Unless'], correct: 2, explanation: 'despite後接動名詞。' },
+                    { question: 'The project failed _____ poor planning.', options: ['because of', 'because', 'although', 'unless'], correct: 0, explanation: 'because of後接名詞。' },
+                    { question: '_____ his efforts, he could not finish on time.', options: ['Despite', 'Although', 'Because', 'Unless'], correct: 0, explanation: 'despite後接名詞。' }
+                ]
+            }
         ];
 
-        // ===== 資料庫：詞彙 (若原 index.html 有 vocabularyData，請保留) =====
+        // ===== 資料庫：詞彙（從英文資料庫合併） =====
         const vocabularyData = [
-            // 這裡同樣保留原 index.html 中的詞彙資料庫內容
+            // B2進階詞彙
+            { word: 'proficiency', pronunciation: '/prəˈfɪʃənsi/', meaning: '熟練度、精通', example: 'Language proficiency is essential for international business.' },
+            { word: 'coherent', pronunciation: '/koʊˈhɪrənt/', meaning: '連貫的、清晰的', example: 'Your essay should have a coherent structure.' },
+            { word: 'elaborate', pronunciation: '/ɪˈlæbərət/', meaning: '詳細說明、詳細的', example: 'Can you elaborate on your previous point?' },
+            { word: 'concise', pronunciation: '/kənˈsaɪs/', meaning: '簡明的、簡潔的', example: 'Write a concise summary of the article.' },
+            { word: 'nuance', pronunciation: '/ˈnuːɑːns/', meaning: '細微差別、細節', example: 'B2 learners should understand the nuances of English grammar.' },
+            { word: 'pragmatic', pronunciation: '/præɡˈmætɪk/', meaning: '實用主義的、實際的', example: 'Take a pragmatic approach to language learning.' },
+
+            // TOEIC常考商務詞彙
+            { word: 'commitment', pronunciation: '/kəˈmɪtmənt/', meaning: '承諾、投入、責任', example: 'Our company shows strong commitment to customer satisfaction.' },
+            { word: 'optimize', pronunciation: '/ˈɒptɪmaɪz/', meaning: '優化、改善', example: 'We need to optimize our production process to increase efficiency.' },
+            { word: 'facilitate', pronunciation: '/fəˈsɪlɪteɪt/', meaning: '便利、促進、幫助', example: 'This new software will facilitate better communication among teams.' },
+            { word: 'allocate', pronunciation: '/ˈæləkeɪt/', meaning: '分配、撥款', example: 'The budget will be allocated to different departments.' },
+            { word: 'implement', pronunciation: '/ˈɪmpləment/', meaning: '實施、執行、工具', example: 'We will implement the new strategy next quarter.' },
+            { word: 'coordinate', pronunciation: '/koʊˈɔːrdɪneɪt/', meaning: '協調、配合', example: 'Please coordinate with the HR department on this project.' },
+            { word: 'profitability', pronunciation: '/ˌprɒfɪtəˈbɪləti/', meaning: '獲利能力、盈利性', example: 'The company\'s profitability has improved significantly.' },
+            { word: 'productivity', pronunciation: '/prəˈdʌktɪvɪti/', meaning: '生產力、效率', example: 'Improving workplace conditions can boost employee productivity.' },
+            { word: 'competent', pronunciation: '/ˈkɒmpɪtənt/', meaning: '有能力的、勝任的', example: 'All our staff members are highly competent professionals.' },
+            { word: 'reliable', pronunciation: '/rɪˈlaɪəbl/', meaning: '可靠的、值得信任的', example: 'We need a reliable supplier for our manufacturing.' },
+            { word: 'obsolete', pronunciation: '/ˌɒbsəˈliːt/', meaning: '過時的、廢棄的', example: 'The old equipment has become obsolete.' },
+            { word: 'leverage', pronunciation: '/ˈlevərɪdʒ/', meaning: '運用、利用、槓桿', example: 'We can leverage our resources to enter new markets.' },
+
+            // TOEIC常考日常詞彙
+            { word: 'agenda', pronunciation: '/əˈdʒendə/', meaning: '議程、日程', example: 'The meeting agenda includes budget planning and staff updates.' },
+            { word: 'correspond', pronunciation: '/ˌkɒrɪˈspɒnd/', meaning: '通信、符合、相當', example: 'Please correspond with our partner about the shipment date.' },
+            { word: 'transaction', pronunciation: '/trænˈzækʃən/', meaning: '交易、事務', example: 'All financial transactions must be recorded properly.' },
+            { word: 'eligible', pronunciation: '/ˈelɪdʒəbl/', meaning: '有資格的、合格的', example: 'Only employees with two years of service are eligible for bonuses.' },
+            { word: 'substantial', pronunciation: '/səbˈstænʃəl/', meaning: '大量的、實質的、堅固的', example: 'The project requires a substantial budget investment.' },
+            { word: 'versatile', pronunciation: '/ˈvɜːrsətɑːɪl/', meaning: '多才多藝的、多用途的', example: 'This software is very versatile and can handle various tasks.' }
         ];
 
-        // ===== 使用者與 localStorage key 工具函式（原 script 保留） =====
+        // ===== 使用者與 localStorage key 工具函式 =====
         let currentUser = localStorage.getItem('currentEnglishUser') || 'guest';
         let allUsers = JSON.parse(localStorage.getItem('allEnglishUsers') || '["guest"]');
 
@@ -1247,76 +1365,90 @@
                 return;
             }
 
-            if (words >= 150 && words <= 200) {
-                feedback.innerHTML = `<div class="feedback success">✅ 完美！你寫出了一篇${words}字的短文，符合B2級別要求。</div>`;
+            if (words >= 150 && words <= 220) {
+                feedback.innerHTML = `<div class="feedback success">✅ 很棒！你的短文字數適中，適合B2級別練習。</div>`;
                 incrementStats('writingCount');
-            } else if (words > 100) {
-                feedback.innerHTML = `<div class="feedback info">💡 你的短文有${words}字。B2級別目標是150-200字。試著加入更多細節和例子。</div>`;
             } else {
-                feedback.innerHTML = `<div class="feedback info">💡 你的短文只有${words}字。請補充到150-200字。</div>`;
+                feedback.innerHTML = `<div class="feedback info">💡 請將字數控制在150-200字之間，目前約為 ${words} 字。</div>`;
             }
         }
 
-        function addWordCounter() {
-            const textarea = document.getElementById('answer3');
-            if (textarea) {
-                textarea.addEventListener('input', () => {
-                    const words = textarea.value.split(/\s+/).filter(w => w.length > 0).length;
-                    document.getElementById('wordCounter').textContent = words;
-                });
-            }
-        }
-
-        // ===== 詞彙渲染 (若原本有對應函式則保留/整合) =====
+        // ===== 詞彙每日載入 =====
         function loadVocabularyForToday() {
             const container = document.getElementById('vocabularyList');
-            if (!container || !vocabularyData || vocabularyData.length === 0) return;
+            if (!container) return;
             container.innerHTML = '';
-            const dayIndex = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
-            const todayList = vocabularyData[dayIndex % vocabularyData.length];
 
-            todayList.forEach(item => {
+            const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+            const startIndex = (dayOfYear * 3) % vocabularyData.length;
+
+            const todayWords = [
+                vocabularyData[startIndex],
+                vocabularyData[(startIndex + 1) % vocabularyData.length],
+                vocabularyData[(startIndex + 2) % vocabularyData.length]
+            ];
+
+            todayWords.forEach((item, idx) => {
+                if (!item) return;
                 const div = document.createElement('div');
                 div.className = 'vocabulary-card';
                 div.innerHTML = `
                     <div class="word">
                         ${item.word}
-                        <button class="play-btn" onclick="playWordAudio('${item.word}', this)">▶</button>
+                        <button class="play-btn" onclick="playPronunciation('${item.word}', this)">▶</button>
                     </div>
-                    <div class="pronunciation">${item.pronunciation || ''}</div>
-                    <div class="meaning">${item.meaning || ''}</div>
-                    <div class="example">${item.example || ''}</div>
+                    <div class="pronunciation">${item.pronunciation}</div>
+                    <div class="meaning">${item.meaning}</div>
+                    <div class="example">${item.example}</div>
                 `;
                 container.appendChild(div);
             });
         }
 
-        function playWordAudio(word, btn) {
+        function playPronunciation(text, btn) {
             if (!window.speechSynthesis) return;
-            const utter = new SpeechSynthesisUtterance(word);
-            utter.lang = 'en-US';
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+
             btn.classList.add('playing');
-            utter.onend = () => btn.classList.remove('playing');
-            speechSynthesis.speak(utter);
+            speechSynthesis.cancel();
+            speechSynthesis.speak(utterance);
+            utterance.onend = () => {
+                btn.classList.remove('playing');
+            };
         }
 
-        // ===== 日期顯示與預覽 =====
+        // ===== 頁籤切換 =====
+        function switchGrammarTab(index) {
+            document.querySelectorAll('#grammarTabs .tab').forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('#grammarContent .tab-content').forEach((content, i) => {
+                content.classList.toggle('active', i === index);
+            });
+        }
+
+        function switchWritingTab(index) {
+            document.querySelectorAll('#writingTabs .tab').forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('#writingContent .tab-content').forEach((content, i) => {
+                content.classList.toggle('active', i === index);
+            });
+        }
+
+        // ===== 日期顯示與未來預覽 =====
         function updateDateDisplay() {
-            const today = new Date();
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const dateStr = today.toLocaleDateString('zh-TW', options);
             const el = document.getElementById('dateDisplay');
-            if (el) el.textContent = `📅 ${dateStr}`;
+            if (!el) return;
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+            el.textContent = '📅 今天：' + today.toLocaleDateString('zh-TW', options);
         }
 
         function previewFutureDay() {
             const modal = document.getElementById('previewModal');
-            if (!modal) return;
-            modal.classList.add('show');
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            const dateInput = document.getElementById('previewDate');
-            if (dateInput) dateInput.valueAsDate = tomorrow;
+            if (modal) modal.classList.add('show');
         }
 
         function closePreviewModal() {
@@ -1327,59 +1459,63 @@
         function loadPreviewContent() {
             const dateInput = document.getElementById('previewDate');
             const preview = document.getElementById('previewContent');
-            if (!dateInput || !preview) return;
+            if (!dateInput || !preview || !dateInput.value) return;
+
             const selectedDate = new Date(dateInput.value);
-            if (isNaN(selectedDate.getTime())) {
-                preview.innerHTML = '<div class="feedback error">❌ 請先選擇有效日期</div>';
-                return;
-            }
-            const dayIndex = Math.floor((selectedDate - new Date(selectedDate.getFullYear(), 0, 0)) / 86400000);
-            const ex1 = writingExercisesBank.level1[dayIndex % writingExercisesBank.level1.length];
-            const ex2 = writingExercisesBank.level2[dayIndex % writingExercisesBank.level2.length];
-            const ex3 = writingExercisesBank.level3[dayIndex % writingExercisesBank.level3.length];
+            const dayOfYear = Math.floor((selectedDate - new Date(selectedDate.getFullYear(), 0, 0)) / 86400000);
+
+            const ex1 = writingExercisesBank.level1[dayOfYear % writingExercisesBank.level1.length];
+            const ex2 = writingExercisesBank.level2[dayOfYear % writingExercisesBank.level2.length];
+            const ex3 = writingExercisesBank.level3[dayOfYear % writingExercisesBank.level3.length];
+
+            const startIndex = (dayOfYear * 3) % vocabularyData.length;
+            const words = [
+                vocabularyData[startIndex],
+                vocabularyData[(startIndex + 1) % vocabularyData.length],
+                vocabularyData[(startIndex + 2) % vocabularyData.length]
+            ];
 
             preview.innerHTML = `
-                <h4 style="color: var(--primary); margin-bottom: 10px;">該日期預計練習內容</h4>
-                <p><strong>Level 1：</strong> ${ex1.question}</p>
-                <p><strong>Level 2：</strong> ${ex2.topic}（${ex2.keywords}）</p>
-                <p><strong>Level 3：</strong> ${ex3.topic}</p>
+                <h4 style="color: var(--primary); margin-bottom: 10px;">📌 預覽日期：${dateInput.value}</h4>
+                <div style="margin-bottom: 10px;">
+                    <strong>句子組合：</strong> ${ex1.question}<br>
+                    <span style="color: var(--text-light);">Hint: ${ex1.hint}</span>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>段落寫作主題：</strong> ${ex2.topic}<br>
+                    <strong>關鍵詞：</strong> ${ex2.keywords}
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>短文主題：</strong> ${ex3.topic}
+                </div>
+                <div>
+                    <strong>當日單字預覽：</strong>
+                    <ul>
+                        ${words.map(w => w ? `<li>${w.word} - ${w.meaning}</li>` : '').join('')}
+                    </ul>
+                </div>
             `;
         }
 
-        // ===== Tab 切換 =====
-        function switchGrammarTab(index) {
-            const grammarTabs = document.querySelectorAll('#grammarTabs .tab');
-            const grammarContents = document.querySelectorAll('#grammarContent .tab-content');
-
-            grammarTabs.forEach(tab => tab.classList.remove('active'));
-            grammarContents.forEach(content => content.classList.remove('active'));
-
-            grammarTabs[index].classList.add('active');
-            grammarContents[index].classList.add('active');
-        }
-
-        function switchWritingTab(index) {
-            const writingTabs = document.querySelectorAll('#writingTabs .tab');
-            const writingContents = document.querySelectorAll('#writingContent .tab-content');
-
-            writingTabs.forEach(tab => tab.classList.remove('active'));
-            writingContents.forEach(content => content.classList.remove('active'));
-
-            writingTabs[index].classList.add('active');
-            writingContents[index].classList.add('active');
-        }
+        // ===== 寫作區字數統計 =====
+        document.addEventListener('input', function (e) {
+            if (e.target && e.target.id === 'answer3') {
+                const words = e.target.value.split(/\s+/).filter(w => w.length > 0).length;
+                const counter = document.getElementById('wordCounter');
+                if (counter) counter.textContent = words;
+            }
+        });
 
         // ===== 初始化 =====
-        window.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('load', () => {
             updateCurrentUserDisplay();
-            updateDateDisplay();
-            renderSchedule();
-            loadDailyExercises();
-            addWordCounter();
-            loadVocabularyForToday();
             updateStats();
             performDailyCheckIn();
+            renderSchedule();
+            loadDailyExercises();
             loadGrammarQuizzes();
+            loadVocabularyForToday();
+            updateDateDisplay();
         });
     </script>
 </body>
