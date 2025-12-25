@@ -55,15 +55,15 @@
     span.s19{font:12px 'Helvetica Neue';font-kerning:none;background-color:#fffef6}
     span.s20{font-kerning:none;background-color:#fffef6}
     span.s21{font:13px '.AppleTraditionalChineseFont';font-kerning:none;background-color:#fff3e0}
-    span.s22{font-kerning:none;background-color:#fff3e0}
+    span.s22{font-kerning:none	background-color:#fff3e0}
     span.s23{font:13px 'PingFang TC';font-kerning:none;background-color:#fff3e0}
     span.s24{font:13px 'Helvetica Neue';font-kerning:none;background-color:#fff3e0}
     span.s25{font:13px 'PingFang TC';font-kerning:none}
     span.s26{font:12px '.AppleTraditionalChineseFont';font-kerning:none;background-color:#fffef6}
     span.s27{font:12px '.AppleTraditionalChineseFont';font-kerning:none;background-color:#ffffff}
-    span.s28{font:12px 'Helvetica Neue';font-kerning:none;background-color:#ffffff}
+    span.s28{font:12px 'Helvetica Neue';font-kerning:none	background-color:#ffffff}
     span.s29{font:13px '.Apple Color Emoji UI';font-kerning:none}
-        /* ==== 新增：整體排版容器與卡片樣式 ==== */
+
     .dashboard-wrapper {
       max-width: 1100px;
       margin: 24px auto;
@@ -91,7 +91,6 @@
     .stat-label {
       font-size: 14px;
     }
-
     .section-card {
       background-color: #f6e4cf;
       border-radius: 18px;
@@ -99,7 +98,6 @@
       margin-bottom: 24px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.06);
     }
-
     .blocks-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -128,54 +126,83 @@
       font-size: 14px;
       line-height: 1.5;
     }
-
     @media (max-width: 768px) {
-      .stats-row {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .blocks-row {
-        grid-template-columns: 1fr;
-      }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .blocks-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
+
+<!-- 上方主視覺 -->
 <h1 style="margin:0 0 8px 0;text-align:center;line-height:44.8px;font:28px 'PingFang TC Semibold';color:#493933;-webkit-text-stroke:#493933">
   <span class="s1">🎯</span><span class="s2"><b> </b></span><span class="s3"><b>英語學習平台</b></span>
 </h1>
 <p class="p2"><span class="s4">B1→B2 </span><span class="s5">進階課程</span><span class="s4"> | </span><span class="s5">每日</span><span class="s4">15</span><span class="s5">分鐘集中學習</span></p>
+
 <div class="dashboard-wrapper">
 
+  <!-- 使用者與切換 -->
   <p class="p3"><span class="s5">👤</span><span class="s4"> </span><span class="s6">遊客</span></p>
   <p class="p4"><span class="s7">👥</span><span class="s4"> </span><span class="s5">切換用戶</span></p>
 
+  <!-- 上方四個統計卡片 -->
   <div class="section-card">
     <div class="stats-row">
-      <!-- 4 個 stat-card ... -->
+      <div class="stat-card">
+        <div class="stat-number">0</div>
+        <div class="stat-label">學習天數</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">0</div>
+        <div class="stat-label">新單字</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">0</div>
+        <div class="stat-label">寫作篇數</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">0</div>
+        <div class="stat-label">連續天數</div>
+      </div>
     </div>
   </div>
 
+  <!-- 每日 5-5-5 三個 Block 卡片 -->
   <div class="section-card">
-    <p class="p7">…每日 5-5-5 學習方法…</p>
+    <p class="p7">
+      <span class="s9">⏱️</span><span class="s5"><b> </b></span>
+      <span class="s10"><b>每日 5-5-5 學習方法</b></span>
+    </p>
+
     <div class="blocks-row">
-      <!-- 3 個 block-card ... -->
+      <div class="block-card">
+        <div class="block-title">📻 Block 1: 聽力輸入</div>
+        <div class="block-minutes">5 分鐘</div>
+        <div class="block-desc">
+          播放英文對話、 TED 演講或新聞片段，提升聽力理解能力。
+        </div>
+      </div>
+      <div class="block-card">
+        <div class="block-title">🎤 Block 2: 口說輸出</div>
+        <div class="block-minutes">5 分鐘</div>
+        <div class="block-desc">
+          跟讀、自由演講或對話練習，培養口說流暢度。
+        </div>
+      </div>
+      <div class="block-card">
+        <div class="block-title">✍️ Block 3: 寫作整合</div>
+        <div class="block-minutes">5 分鐘</div>
+        <div class="block-desc">
+          微寫作練習、句子組織，強化寫作表達能力。
+        </div>
+      </div>
     </div>
   </div>
+
 </div>
-<h3 style="margin:0 0 8px 0;text-align:center;line-height:28.8px;font:18px 'Helvetica Neue';color:#493933;-webkit-text-stroke:#493933">
-  <span class="s11">🎤</span><span class="s8"><b> Block 2: </b></span><span class="s12"><b>口說輸出</b></span>
-</h3>
-<p class="p5"><span class="s8"><b>5 </b></span><span class="s13"><b>分鐘</b></span></p>
-<p class="p6"><span class="s8">跟讀、自由演講或對話練習</span><span class="s14"> </span></p>
-<p class="p9"><span class="s8">培養口說流暢度</span><span class="s14"> </span></p>
 
-<h3 style="margin:0 0 8px 0;text-align:center;line-height:28.8px;font:18px 'Helvetica Neue';color:#493933;-webkit-text-stroke:#493933">
-  <span class="s11">✍️</span><span class="s8"><b> Block 3: </b></span><span class="s12"><b>寫作整合</b></span>
-</h3>
-<p class="p5"><span class="s8"><b>5 </b></span><span class="s13"><b>分鐘</b></span></p>
-<p class="p6"><span class="s8">微寫作練習、句子組織</span><span class="s14"> </span></p>
-<p class="p9"><span class="s8">強化寫作表達能力</span><span class="s14"> </span></p>
-
+<!-- 原始 B2 文法區 + 寫作練習區 -->
 <p class="p10"><span class="s9">📅</span><span class="s15"><b> </b></span><span class="s10"><b>每週學習主題計劃</b></span></p>
 <p class="p11"><span class="s5"></span><br></p>
 
@@ -201,7 +228,6 @@
 <p class="p10"><span class="s9">✍️</span><span class="s15"><b> </b></span><span class="s10"><b>寫作練習工作區</b></span></p>
 <p class="p13">
   <span class="s8">級別</span><span class="s16">1</span><span class="s8">：句子組合</span>
-  <!-- 加上 data-level 讓 JS 綁定 -->
   <button data-level="level1" style="margin-left:8px;font-size:12px;">抽題</button>
 </p>
 <p class="p15">
@@ -218,13 +244,11 @@
 </h4>
 <p class="p22"><span class="s20">將兩個簡單句子用連接詞組合成複雜句</span></p>
 
-<!-- 這裡放文法題目的容器 -->
 <p class="p23"><span class="s27"><b>文法題目：</b></span></p>
 <p class="p23" id="grammar-question"></p>
 <p class="p23"><span class="s27"><b>選項：</b></span></p>
 <p class="p23" id="grammar-options"></p>
 
-<!-- 這裡放寫作題目的容器 -->
 <p class="p23"><span class="s27"><b>題目 / 提示：</b></span></p>
 <div id="writing-exercise" style="margin:4px 16px;"></div>
 
@@ -249,9 +273,12 @@
 <p class="p26"><span class="s8">55%</span></p>
 <p class="p30"><span class="s5"></span><br></p>
 
-<!-- ===== 下面開始是題庫與互動 script ===== -->
+<!-- 整合後：完整的題庫與互動邏輯 -->
 <script>
-// 文法題庫
+// ==========================================
+// 題庫資料 - 從文法數據文檔導入
+// ==========================================
+
 const grammarData = [
   {
     topic: '現在完成式 vs 過去完成式',
@@ -369,7 +396,10 @@ const grammarData = [
   }
 ];
 
-// 寫作題庫
+// ==========================================
+// 寫作練習題庫資料
+// ==========================================
+
 const writingExercisesBank = {
   level1: [
     { question: 'Combine: "She finished her homework. She went to play." Answer should use a conjunction.', hint: 'Use "after" or "before"' },
@@ -394,7 +424,10 @@ const writingExercisesBank = {
   ]
 };
 
-// 狀態與函式
+// ==========================================
+// 核心功能邏輯 - 整合題庫與 UI
+// ==========================================
+
 let currentGrammarIndex = 0;
 let currentQuestionIndex = 0;
 
@@ -404,32 +437,34 @@ function loadGrammarQuestion() {
 
   const questionElement = document.getElementById('grammar-question');
   const optionsContainer = document.getElementById('grammar-options');
+
   if (!questionElement || !optionsContainer) return;
 
-  questionElement.textContent = `[${topic.topic}] ${question.question}`;
+  questionElement.textContent = question.question;
   optionsContainer.innerHTML = '';
 
   question.options.forEach((option, index) => {
-    const btn = document.createElement('button');
-    btn.textContent = option;
-    btn.style.marginRight = '6px';
-    btn.style.marginBottom = '4px';
-    btn.onclick = () => checkGrammarAnswer(index, question.correct, question.explanation);
-    optionsContainer.appendChild(btn);
+    const button = document.createElement('button');
+    button.className = 'option-btn';
+    button.textContent = option;
+    button.onclick = () => checkGrammarAnswer(index, question.correct, question.explanation);
+    optionsContainer.appendChild(button);
   });
 }
 
 function checkGrammarAnswer(selected, correct, explanation) {
   if (selected === correct) {
-    alert('✅ 正確！\n\n' + explanation);
+    alert(`✅ 正確！\n\n${explanation}`);
   } else {
-    alert('❌ 再試一次～\n\n' + explanation);
+    alert(`❌ 錯誤！\n\n${explanation}`);
   }
+
   currentQuestionIndex++;
   if (currentQuestionIndex >= grammarData[currentGrammarIndex].questions.length) {
     currentQuestionIndex = 0;
     currentGrammarIndex = (currentGrammarIndex + 1) % grammarData.length;
   }
+
   loadGrammarQuestion();
 }
 
@@ -440,28 +475,28 @@ function loadWritingExercise(level) {
   const exerciseDiv = document.getElementById('writing-exercise');
   if (!exerciseDiv) return;
 
-  const idx = Math.floor(Math.random() * exercises.length);
-  const ex = exercises[idx];
+  const randomIndex = Math.floor(Math.random() * exercises.length);
+  const exercise = exercises[randomIndex];
 
   exerciseDiv.innerHTML = '';
 
-  if (ex.question) {
-    const qP = document.createElement('p');
-    qP.innerHTML = '<b>題目：</b> ' + ex.question;
-    exerciseDiv.appendChild(qP);
+  if (exercise.question) {
+    const questionP = document.createElement('p');
+    questionP.innerHTML = `<strong>題目：</strong> ${exercise.question}`;
+    exerciseDiv.appendChild(questionP);
 
-    const hP = document.createElement('p');
-    hP.innerHTML = '<b>提示：</b> ' + ex.hint;
-    exerciseDiv.appendChild(hP);
+    const hintP = document.createElement('p');
+    hintP.innerHTML = `<strong>提示：</strong> ${exercise.hint}`;
+    exerciseDiv.appendChild(hintP);
   } else {
-    const tP = document.createElement('p');
-    tP.innerHTML = '<b>寫作主題：</b> ' + ex.topic;
-    exerciseDiv.appendChild(tP);
+    const topicP = document.createElement('p');
+    topicP.innerHTML = `<strong>寫作主題：</strong> ${exercise.topic}`;
+    exerciseDiv.appendChild(topicP);
 
-    if (ex.keywords) {
-      const kP = document.createElement('p');
-      kP.innerHTML = '<b>關鍵詞彙：</b> ' + ex.keywords;
-      exerciseDiv.appendChild(kP);
+    if (exercise.keywords) {
+      const keywordsP = document.createElement('p');
+      keywordsP.innerHTML = `<strong>關鍵詞彙：</strong> ${exercise.keywords}`;
+      exerciseDiv.appendChild(keywordsP);
     }
   }
 
@@ -474,8 +509,7 @@ function loadWritingExercise(level) {
 
   const submitBtn = document.createElement('button');
   submitBtn.textContent = '提交檢查';
-  submitBtn.style.marginTop = '6px';
-  submitBtn.onclick = submitWriting;
+  submitBtn.onclick = () => submitWriting();
   exerciseDiv.appendChild(submitBtn);
 }
 
@@ -483,17 +517,20 @@ function submitWriting() {
   const writingInput = document.getElementById('writing-input');
   if (!writingInput) return;
 
-  const text = writingInput.value.trim();
-  if (!text) {
-    alert('請先輸入答案再提交。');
+  const userWriting = writingInput.value.trim();
+  if (!userWriting) {
+    alert('請輸入答案！');
     return;
   }
-  alert('✅ 答案已提交！\n\n建議請老師或同學幫忙給回饋。');
+
+  alert('✅ 答案已提交！\n\n教師將進行批改評分。');
   writingInput.value = '';
 }
 
 function initializeLearningApp() {
-  loadGrammarQuestion();
+  if (document.getElementById('grammar-question')) {
+    loadGrammarQuestion();
+  }
 
   const writingBtns = document.querySelectorAll('[data-level]');
   writingBtns.forEach(btn => {
@@ -506,5 +543,6 @@ function initializeLearningApp() {
 
 document.addEventListener('DOMContentLoaded', initializeLearningApp);
 </script>
+
 </body>
 </html>
