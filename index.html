@@ -18,8 +18,6 @@
         .tabs{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
         .tab{padding:12px 18px;background:#FDD9BE;color:#3D3D3D;border:none;border-radius:6px;cursor:pointer;font-weight:500;transition:all 0.3s}
         .tab.active{background:#F5C197;color:white}
-        .tab-content{display:none}
-        .tab-content.active{display:block}
         .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px}
         .stat-card{background:#FFF5E6;padding:15px;border-radius:8px;border:2px solid #FDD9BE;text-align:center}
         .stat-number{font-size:28px;font-weight:bold;color:#F5C197}
@@ -143,7 +141,7 @@
 </div>
 
 <script>
-    // 假資料：B2 詞彙
+    // ========= B2 詞彙示意，可之後自行擴充 =========
     const vocabData = [
         {
             word: 'significant',
@@ -156,50 +154,85 @@
             pronunciation: '/ˈtʃæl.ɪndʒ/',
             meaning: '挑戰；難題',
             example: 'Preparing students for B2 exams can be a real challenge.'
+        },
+        {
+            word: 'efficient',
+            pronunciation: '/ɪˈfɪʃ.ənt/',
+            meaning: '有效率的',
+            example: 'This learning platform helps students study in an efficient way.'
         }
     ];
 
-    // 假資料：文法題
+    // ========= 文法數據（從 Wen-Fa-Shu-Ju.docx 匯入摘要版） =========
     const grammarData = [
         {
-            title: '一、關係子句',
+            topic: '現在完成式 vs 過去完成式',
             questions: [
-                {
-                    text: 'Choose the best option: The student _____ homework was late talked to the teacher.',
-                    options: ['who', 'whose', 'which', 'that'],
-                    answer: 1,
-                    explain: '在名詞後面修飾「所有格」時，用 whose。'
-                }
+                { question: 'I _____ in this city for 10 years.',
+                  options: ['lived', 'have lived', 'had lived', 'was living'],
+                  correct: 1,
+                  explanation: '現在完成式表示從過去到現在的持續狀態。' },
+                { question: 'Before he arrived, they _____ the meeting.',
+                  options: ['started', 'have started', 'had started', 'were starting'],
+                  correct: 2,
+                  explanation: '過去完成式表示在另一個過去動作之前發生的事。' }
+            ]
+        },
+        {
+            topic: '虛擬語氣',
+            questions: [
+                { question: 'If I _____ you, I would accept the offer.',
+                  options: ['was', 'were', 'am', 'had been'],
+                  correct: 1,
+                  explanation: '虛擬語氣中使用 were，即使主語是單數。' },
+                { question: 'If you _____ harder, you would have passed.',
+                  options: ['studied', 'had studied', 'study', 'would study'],
+                  correct: 1,
+                  explanation: '第三類條件句用過去完成式。' }
+            ]
+        },
+        {
+            topic: '被動語態',
+            questions: [
+                { question: 'The project _____ by the team next week.',
+                  options: ['is completed', 'will be completed', 'was completed', 'has been completed'],
+                  correct: 1,
+                  explanation: '未來時被動語態使用 will be + past participle。' },
+                { question: 'The report _____ yesterday.',
+                  options: ['should submit', 'should be submitted', 'should submitted', 'submit'],
+                  correct: 1,
+                  explanation: '情態動詞 + be + past participle。' }
             ]
         }
+        // 可依需要再把 docx 其餘題目補進來
     ];
 
-    // 假資料：寫作題
-    const writingLevels = [
-        [
-            {
-                label: '級別1：句子組合',
-                prompt: '使用 provided / challenge / improve 三個單字，寫出 2 個完整英文句子。',
-                hint: '每句至少 8 字，注意動詞時態一致。'
-            }
+    // ========= 寫作練習題庫（從 Wen-Fa-Shu-Ju.docx 匯入） =========
+    const writingExercisesBank = {
+        level1: [
+            { question: 'Combine: "She finished her homework. She went to play." Answer should use a conjunction.',
+              hint: 'Use "after" or "before"' },
+            { question: 'Combine: "He studied hard. He passed the exam." Answer should use a conjunction.',
+              hint: 'Use "so" or "because"' },
+            { question: 'Combine: "The weather was bad. We went outside anyway." Answer should use a conjunction.',
+              hint: 'Use "although" or "even though"' }
         ],
-        [
-            {
-                label: '級別2：段落寫作',
-                prompt: '描述你最近一次遇到的學習挑戰，以及你如何解決它。',
-                hint: '目標 80–120 字，分 1–2 段，注意連接詞（for example, however, therefore）。'
-            }
+        level2: [
+            { topic: 'My favorite hobby',
+              keywords: 'enjoy, practice, improve, passion' },
+            { topic: 'A memorable travel experience',
+              keywords: 'memorable, experience, learned, cultural' },
+            { topic: 'The role of technology in education',
+              keywords: 'technology, learning, improve, access' }
         ],
-        [
-            {
-                label: '級別3：短文創作',
-                prompt: '「從 B1 到 B2」：寫一篇短文分享你的學習策略與心得。',
-                hint: '目標 150–200 字，可包含開頭、發展、結尾三部分。'
-            }
+        level3: [
+            { topic: 'The importance of learning English in the digital age' },
+            { topic: 'How to balance work and personal life' },
+            { topic: 'The impact of social media on society' }
         ]
-    ];
+    };
 
-    // 簡易用戶資料（localStorage）
+    // ========= 用戶 / 進度 localStorage =========
     const STORAGE_KEY = 'b1b2_users_v1';
 
     function loadUsers() {
@@ -297,7 +330,7 @@
         d4.textContent = data.writings;
     }
 
-    // 詞彙區塊渲染
+    // ========= 詞彙渲染 =========
     function renderVocab() {
         const vc = document.getElementById('vc');
         vc.innerHTML = '';
@@ -315,7 +348,7 @@
         });
     }
 
-    // 文法區塊渲染
+    // ========= 文法渲染 =========
     function renderGrammar() {
         const gt = document.getElementById('gt');
         const gc = document.getElementById('gc');
@@ -324,7 +357,9 @@
 
         grammarData.forEach(section => {
             const titleDiv = document.createElement('div');
-            titleDiv.textContent = section.title;
+            titleDiv.textContent = section.topic;
+            titleDiv.style.fontWeight = 'bold';
+            titleDiv.style.color = '#A89968';
             titleDiv.style.marginBottom = '10px';
             gt.appendChild(titleDiv);
 
@@ -337,16 +372,16 @@
                 }).join('');
 
                 qDiv.innerHTML = `
-                    <div class="q-text">Q${idx + 1}. ${q.text}</div>
+                    <div class="q-text">Q${idx + 1}. ${q.question}</div>
                     <div class="options">${optionsHtml}</div>
-                    <div class="explain">解說：${q.explain}</div>
+                    <div class="explain">解說：${q.explanation}</div>
                 `;
                 const btns = qDiv.querySelectorAll('.opt-btn');
                 const explain = qDiv.querySelector('.explain');
                 btns.forEach((btn, i) => {
                     btn.addEventListener('click', () => {
                         btns.forEach(b => b.classList.remove('correct'));
-                        if (i === q.answer) {
+                        if (i === q.correct) {
                             btn.classList.add('correct');
                         }
                         explain.classList.add('show');
@@ -358,52 +393,92 @@
         });
     }
 
-    // 寫作區塊渲染
+    // ========= 寫作渲染 =========
     function renderWriting(levelIndex) {
         const wc = document.getElementById('wc');
         wc.innerHTML = '';
-        const tasks = writingLevels[levelIndex] || [];
-        tasks.forEach((task, idx) => {
-            const div = document.createElement('div');
-            div.className = 'writing-ex';
-            div.innerHTML = `
-                <div class="ex-label">${task.label}</div>
-                <div class="ex-content">${task.prompt}</div>
-                <div class="ex-hint">${task.hint}</div>
-                <textarea data-idx="${idx}" placeholder="在此輸入你的英文回答..."></textarea>
-                <div class="word-count">目前字數：<span>0</span> words</div>
-                <button class="submit-btn" type="button">標記為完成（示意）</button>
-                <div class="feedback">已標記完成！建議請老師或同學幫忙回饋內容。</div>
-            `;
-            const textarea = div.querySelector('textarea');
-            const countSpan = div.querySelector('.word-count span');
-            const btn = div.querySelector('.submit-btn');
-            const feedback = div.querySelector('.feedback');
 
-            textarea.addEventListener('input', () => {
-                const text = textarea.value.trim();
-                const words = text ? text.split(/\s+/).length : 0;
-                countSpan.textContent = words;
+        if (levelIndex === 0) {
+            const tasks = writingExercisesBank.level1;
+            tasks.forEach((task, idx) => {
+                const div = document.createElement('div');
+                div.className = 'writing-ex';
+                div.innerHTML = `
+                    <div class="ex-label">級別1：句子組合</div>
+                    <div class="ex-content">${task.question}</div>
+                    <div class="ex-hint">${task.hint}</div>
+                    <textarea data-idx="${idx}" placeholder="在此輸入你的英文句子..."></textarea>
+                    <div class="word-count">目前字數：<span>0</span> words</div>
+                    <button class="submit-btn" type="button">標記為完成（示意）</button>
+                    <div class="feedback">已標記完成！建議請老師或同學幫忙回饋內容。</div>
+                `;
+                setupWritingItem(div);
+                wc.appendChild(div);
             });
-
-            btn.addEventListener('click', () => {
-                feedback.classList.add('show');
-                if (userState.current) {
-                    const user = userState.users[userState.current] || {
-                        days: 0, streak: 0, words: 0, writings: 0
-                    };
-                    user.writings += 1;
-                    userState.users[userState.current] = user;
-                    saveUsers(userState);
-                    loadUserProgress();
-                }
+        } else if (levelIndex === 1) {
+            const tasks = writingExercisesBank.level2;
+            tasks.forEach((task, idx) => {
+                const div = document.createElement('div');
+                div.className = 'writing-ex';
+                div.innerHTML = `
+                    <div class="ex-label">級別2：段落寫作</div>
+                    <div class="ex-content">主題：${task.topic}</div>
+                    <div class="ex-hint">關鍵詞：${task.keywords}</div>
+                    <textarea data-idx="${idx}" placeholder="依主題寫出約 3–5 句英文段落..."></textarea>
+                    <div class="word-count">目前字數：<span>0</span> words</div>
+                    <button class="submit-btn" type="button">標記為完成（示意）</button>
+                    <div class="feedback">已標記完成！建議請老師或同學幫忙回饋內容。</div>
+                `;
+                setupWritingItem(div);
+                wc.appendChild(div);
             });
+        } else if (levelIndex === 2) {
+            const tasks = writingExercisesBank.level3;
+            tasks.forEach((task, idx) => {
+                const div = document.createElement('div');
+                div.className = 'writing-ex';
+                div.innerHTML = `
+                    <div class="ex-label">級別3：短文創作</div>
+                    <div class="ex-content">寫作主題：${task.topic}</div>
+                    <div class="ex-hint">目標 150–200 字，可分為開頭、發展、結尾三部分。</div>
+                    <textarea data-idx="${idx}" placeholder="在此撰寫完整英文短文..."></textarea>
+                    <div class="word-count">目前字數：<span>0</span> words</div>
+                    <button class="submit-btn" type="button">標記為完成（示意）</button>
+                    <div class="feedback">已標記完成！建議請老師或同學幫忙回饋內容。</div>
+                `;
+                setupWritingItem(div);
+                wc.appendChild(div);
+            });
+        }
+    }
 
-            wc.appendChild(div);
+    function setupWritingItem(div) {
+        const textarea = div.querySelector('textarea');
+        const countSpan = div.querySelector('.word-count span');
+        const btn = div.querySelector('.submit-btn');
+        const feedback = div.querySelector('.feedback');
+
+        textarea.addEventListener('input', () => {
+            const text = textarea.value.trim();
+            const words = text ? text.split(/\s+/).length : 0;
+            countSpan.textContent = words;
+        });
+
+        btn.addEventListener('click', () => {
+            feedback.classList.add('show');
+            if (userState.current) {
+                const user = userState.users[userState.current] || {
+                    days: 0, streak: 0, words: 0, writings: 0
+                };
+                user.writings += 1;
+                userState.users[userState.current] = user;
+                saveUsers(userState);
+                loadUserProgress();
+            }
         });
     }
 
-    // Tab 切換
+    // ========= Tab 切換 =========
     function initWritingTabs() {
         const tabContainer = document.getElementById('wt');
         const tabs = tabContainer.querySelectorAll('.tab');
@@ -415,11 +490,10 @@
                 renderWriting(index);
             });
         });
-        // 預設顯示第 0 級別
         renderWriting(0);
     }
 
-    // 初始載入
+    // ========= 初始化 =========
     document.addEventListener('DOMContentLoaded', () => {
         updateCurrentUserDisplay();
         loadUserProgress();
@@ -427,4 +501,6 @@
         renderGrammar();
         initWritingTabs();
     });
-</script
+</script>
+</body>
+</html>
