@@ -63,6 +63,80 @@
     span.s27{font:12px '.AppleTraditionalChineseFont';font-kerning:none;background-color:#ffffff}
     span.s28{font:12px 'Helvetica Neue';font-kerning:none;background-color:#ffffff}
     span.s29{font:13px '.Apple Color Emoji UI';font-kerning:none}
+        /* ==== 新增：整體排版容器與卡片樣式 ==== */
+    .dashboard-wrapper {
+      max-width: 1100px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #f6c18b, #f3a98a);
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+      color: #493933;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 14px;
+    }
+
+    .section-card {
+      background-color: #f6e4cf;
+      border-radius: 18px;
+      padding: 20px 20px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+
+    .blocks-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .block-card {
+      background: linear-gradient(135deg, #f7c18b, #f3ad8f);
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+      color: #493933;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .block-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .block-minutes {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .block-desc {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .blocks-row {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -70,25 +144,24 @@
   <span class="s1">🎯</span><span class="s2"><b> </b></span><span class="s3"><b>英語學習平台</b></span>
 </h1>
 <p class="p2"><span class="s4">B1→B2 </span><span class="s5">進階課程</span><span class="s4"> | </span><span class="s5">每日</span><span class="s4">15</span><span class="s5">分鐘集中學習</span></p>
-<p class="p3"><span class="s5">👤</span><span class="s4"> </span><span class="s6">遊客</span></p>
-<p class="p4"><span class="s7">👥</span><span class="s4"> </span><span class="s5">切換用戶</span></p>
-<p class="p5"><span class="s8"><b>0</b></span></p>
-<p class="p6"><span class="s8">學習天數</span></p>
-<p class="p5"><span class="s8"><b>0</b></span></p>
-<p class="p6"><span class="s8">新單字</span></p>
-<p class="p5"><span class="s8"><b>0</b></span></p>
-<p class="p6"><span class="s8">寫作篇數</span></p>
-<p class="p5"><span class="s8"><b>0</b></span></p>
-<p class="p6"><span class="s8">連續天數</span></p>
+<div class="dashboard-wrapper">
 
-<p class="p7"><span class="s9">⏱️</span><span class="s5"><b> </b></span><span class="s10"><b>每日</b></span><span class="s5"><b>5-5-5</b></span><span class="s10"><b>學習方法</b></span></p>
-<h3 style="margin:0 0 8px 0;text-align:center;line-height:28.8px;font:18px 'Helvetica Neue';color:#493933;-webkit-text-stroke:#493933">
-  <span class="s11">📻</span><span class="s8"><b> Block 1: </b></span><span class="s12"><b>聽力輸入</b></span>
-</h3>
-<p class="p5"><span class="s8"><b>5 </b></span><span class="s13"><b>分鐘</b></span></p>
-<p class="p6"><span class="s8">播放英文對話、</span><span class="s14">TED</span><span class="s8">演講或新聞片段</span><span class="s14"> </span></p>
-<p class="p9"><span class="s8">提升聽力理解能力</span><span class="s14"> </span></p>
+  <p class="p3"><span class="s5">👤</span><span class="s4"> </span><span class="s6">遊客</span></p>
+  <p class="p4"><span class="s7">👥</span><span class="s4"> </span><span class="s5">切換用戶</span></p>
 
+  <div class="section-card">
+    <div class="stats-row">
+      <!-- 4 個 stat-card ... -->
+    </div>
+  </div>
+
+  <div class="section-card">
+    <p class="p7">…每日 5-5-5 學習方法…</p>
+    <div class="blocks-row">
+      <!-- 3 個 block-card ... -->
+    </div>
+  </div>
+</div>
 <h3 style="margin:0 0 8px 0;text-align:center;line-height:28.8px;font:18px 'Helvetica Neue';color:#493933;-webkit-text-stroke:#493933">
   <span class="s11">🎤</span><span class="s8"><b> Block 2: </b></span><span class="s12"><b>口說輸出</b></span>
 </h3>
