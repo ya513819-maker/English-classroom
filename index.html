@@ -1380,13 +1380,15 @@
             container.innerHTML = '';
 
             const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
-            const startIndex = (dayOfYear * 3) % vocabularyData.length;
+            const startIndex = (dayOfYear * 5) % vocabularyData.length;
 
-            const todayWords = [
-                vocabularyData[startIndex],
-                vocabularyData[(startIndex + 1) % vocabularyData.length],
-                vocabularyData[(startIndex + 2) % vocabularyData.length]
-            ];
+          const todayWords = [
+    vocabularyData[startIndex],
+    vocabularyData[(startIndex + 1) % vocabularyData.length],
+    vocabularyData[(startIndex + 2) % vocabularyData.length],
+    vocabularyData[(startIndex + 3) % vocabularyData.length],
+    vocabularyData[(startIndex + 4) % vocabularyData.length]
+];
 
             todayWords.forEach((item, idx) => {
                 if (!item) return;
