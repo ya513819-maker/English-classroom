@@ -141,7 +141,7 @@
 </div>
 
 <script>
-    // ========= B2 詞彙示意，可之後自行擴充 =========
+    // ===== 詞彙（可再擴充） =====
     const vocabData = [
         {
             word: 'significant',
@@ -163,7 +163,7 @@
         }
     ];
 
-    // ========= 文法數據（從 Wen-Fa-Shu-Ju.docx 匯入摘要版） =========
+    // ===== 文法題庫（完整） =====
     const grammarData = [
         {
             topic: '現在完成式 vs 過去完成式',
@@ -203,11 +203,155 @@
                   correct: 1,
                   explanation: '情態動詞 + be + past participle。' }
             ]
+        },
+        {
+            topic: '複雜句型',
+            questions: [
+                { question: '_____ he would come was uncertain.',
+                  options: ['That', 'Which', 'Who', 'What'],
+                  correct: 0,
+                  explanation: '名詞子句需要用 that 引導。' },
+                { question: 'The book _____ I borrowed is excellent.',
+                  options: ['who', 'that', 'which', 'where'],
+                  correct: 1,
+                  explanation: '形容詞子句修飾名詞，用 that 或 which。' }
+            ]
+        },
+        {
+            topic: '時態綜合',
+            questions: [
+                { question: 'When I _____, she _____ cooking.',
+                  options: ['arrive, was cooking', 'arrived, was cooking', 'arrived, is cooking', 'will arrive, was cooking'],
+                  correct: 1,
+                  explanation: '過去時和過去進行式一起使用。' },
+                { question: 'By next year, I _____ here for 20 years.',
+                  options: ['will work', 'will have worked', 'have worked', 'am working'],
+                  correct: 1,
+                  explanation: '未來完成式用於表示到未來某個時間點已完成的動作。' }
+            ]
+        },
+        // ---- TOEIC 文法 60 天主題（節錄自 docx，結構一致）----
+        {
+            topic: '介系詞應用',
+            questions: [
+                { question: 'The manager is responsible _____ the entire project.',
+                  options: ['in', 'for', 'at', 'on'],
+                  correct: 1,
+                  explanation: 'responsible for表示負責。' },
+                { question: 'We are looking _____ to your arrival next week.',
+                  options: ['at', 'forward', 'for', 'after'],
+                  correct: 1,
+                  explanation: 'look forward to表示期待。' },
+                { question: 'The training will be held _____ June 15th at 2 PM.',
+                  options: ['at', 'on', 'in', 'by'],
+                  correct: 1,
+                  explanation: '具體日期前用on。' },
+                { question: '_____ the budget constraints, the company still invested.',
+                  options: ['Although', 'Despite', 'Because', 'Due to'],
+                  correct: 1,
+                  explanation: 'Despite後接名詞片語。' },
+                { question: 'We succeeded _____ great effort and determination.',
+                  options: ['by', 'with', 'through', 'in'],
+                  correct: 2,
+                  explanation: 'through表示藉由。' },
+                { question: 'She is interested _____ learning new languages.',
+                  options: ['in', 'on', 'at', 'for'],
+                  correct: 0,
+                  explanation: 'interested in表示對...有興趣。' },
+                { question: 'The report focuses _____ market trends.',
+                  options: ['in', 'on', 'at', 'for'],
+                  correct: 1,
+                  explanation: 'focus on表示關注。' },
+                { question: 'I have never heard _____ this company before.',
+                  options: ['of', 'about', 'from', 'in'],
+                  correct: 0,
+                  explanation: 'hear of表示聽說。' },
+                { question: 'The employees are committed _____ the company\'s mission.',
+                  options: ['to', 'for', 'on', 'in'],
+                  correct: 0,
+                  explanation: 'committed to表示致力於。' },
+                { question: 'This decision is based _____ market research.',
+                  options: ['on', 'in', 'at', 'for'],
+                  correct: 0,
+                  explanation: 'based on表示基於。' }
+            ]
+        },
+        {
+            topic: '詞性辨析',
+            questions: [
+                { question: 'The _____ of the company has increased significantly.',
+                  options: ['growth', 'grow', 'growing', 'grows'],
+                  correct: 0,
+                  explanation: '冠詞The後需要名詞。' },
+                { question: 'The project was _____ completed before the deadline.',
+                  options: ['success', 'successfully', 'succeed', 'successful'],
+                  correct: 1,
+                  explanation: '修飾動詞需要副詞。' },
+                { question: 'We received an _____ proposal from our partner.',
+                  options: ['impress', 'impressive', 'impressed', 'impression'],
+                  correct: 1,
+                  explanation: '修飾名詞需要形容詞。' },
+                { question: 'The employee\'s _____ to the job is commendable.',
+                  options: ['commit', 'commitment', 'committed', 'commits'],
+                  correct: 1,
+                  explanation: '\'s後需要名詞。' }
+                // 其餘題目可再依 docx 補上
+            ]
+        },
+        {
+            topic: '主詞動詞一致',
+            questions: [
+                { question: 'The team _____ working on the new strategy.',
+                  options: ['are', 'is', 'have', 'has been'],
+                  correct: 1,
+                  explanation: '集體名詞team用單數。' },
+                { question: 'Neither the manager nor the employees _____ available.',
+                  options: ['is', 'are', 'was', 'be'],
+                  correct: 1,
+                  explanation: 'neither...nor與最近主詞employees一致。' },
+                { question: 'The number of applicants _____ exceeded expectations.',
+                  options: ['have', 'has', 'was', 'were'],
+                  correct: 1,
+                  explanation: 'the number of用單數。' }
+            ]
+        },
+        {
+            topic: '分詞與形容詞',
+            questions: [
+                { question: 'The _____ results met all requirements.',
+                  options: ['expected', 'expecting', 'expect', 'expects'],
+                  correct: 0,
+                  explanation: '過去分詞修飾名詞。' },
+                { question: 'The _____ news from the CEO surprised everyone.',
+                  options: ['announcing', 'announced', 'announce', 'announces'],
+                  correct: 1,
+                  explanation: '過去分詞修飾名詞。' },
+                { question: 'We are _____ to hear about the success.',
+                  options: ['excited', 'exciting', 'excite', 'excites'],
+                  correct: 0,
+                  explanation: '人被動時用過去分詞。' }
+            ]
+        },
+        {
+            topic: '連接詞 vs 介系詞',
+            questions: [
+                { question: '_____ the difficult circumstances, the team remained productive.',
+                  options: ['Although', 'Despite', 'However', 'Because of'],
+                  correct: 1,
+                  explanation: 'Despite是介系詞。' },
+                { question: 'We completed the task _____ it rained heavily.',
+                  options: ['despite', 'although', 'in spite of', 'because'],
+                  correct: 1,
+                  explanation: '完整子句用連接詞although。' },
+                { question: '_____ the budget increase, we cannot approve it.',
+                  options: ['In spite of', 'Even though', 'Because', 'For'],
+                  correct: 0,
+                  explanation: 'in spite of是介系詞。' }
+            ]
         }
-        // 可依需要再把 docx 其餘題目補進來
     ];
 
-    // ========= 寫作練習題庫（從 Wen-Fa-Shu-Ju.docx 匯入） =========
+    // ===== 寫作練習題庫 =====
     const writingExercisesBank = {
         level1: [
             { question: 'Combine: "She finished her homework. She went to play." Answer should use a conjunction.',
@@ -215,7 +359,11 @@
             { question: 'Combine: "He studied hard. He passed the exam." Answer should use a conjunction.',
               hint: 'Use "so" or "because"' },
             { question: 'Combine: "The weather was bad. We went outside anyway." Answer should use a conjunction.',
-              hint: 'Use "although" or "even though"' }
+              hint: 'Use "although" or "even though"' },
+            { question: 'Combine: "I finished my work. I went home." Answer should use a conjunction.',
+              hint: 'Use "after" or "when"' },
+            { question: 'Combine: "She was tired. She continued studying." Answer should use a conjunction.',
+              hint: 'Use "though" or "despite"' }
         ],
         level2: [
             { topic: 'My favorite hobby',
@@ -223,16 +371,22 @@
             { topic: 'A memorable travel experience',
               keywords: 'memorable, experience, learned, cultural' },
             { topic: 'The role of technology in education',
-              keywords: 'technology, learning, improve, access' }
+              keywords: 'technology, learning, improve, access' },
+            { topic: 'How to manage time effectively',
+              keywords: 'schedule, priority, focus, achieve' },
+            { topic: 'The importance of friendship',
+              keywords: 'support, trust, loyal, meaningful' }
         ],
         level3: [
             { topic: 'The importance of learning English in the digital age' },
             { topic: 'How to balance work and personal life' },
-            { topic: 'The impact of social media on society' }
+            { topic: 'The impact of social media on society' },
+            { topic: 'Why continuous learning is essential for success' },
+            { topic: 'Environmental protection and individual responsibility' }
         ]
     };
 
-    // ========= 用戶 / 進度 localStorage =========
+    // ===== 用戶 / 進度 =====
     const STORAGE_KEY = 'b1b2_users_v1';
 
     function loadUsers() {
@@ -330,7 +484,7 @@
         d4.textContent = data.writings;
     }
 
-    // ========= 詞彙渲染 =========
+    // ===== 詞彙渲染 =====
     function renderVocab() {
         const vc = document.getElementById('vc');
         vc.innerHTML = '';
@@ -348,7 +502,7 @@
         });
     }
 
-    // ========= 文法渲染 =========
+    // ===== 文法渲染 =====
     function renderGrammar() {
         const gt = document.getElementById('gt');
         const gc = document.getElementById('gc');
@@ -393,7 +547,7 @@
         });
     }
 
-    // ========= 寫作渲染 =========
+    // ===== 寫作渲染 =====
     function renderWriting(levelIndex) {
         const wc = document.getElementById('wc');
         wc.innerHTML = '';
@@ -478,7 +632,7 @@
         });
     }
 
-    // ========= Tab 切換 =========
+    // ===== Tab 切換 =====
     function initWritingTabs() {
         const tabContainer = document.getElementById('wt');
         const tabs = tabContainer.querySelectorAll('.tab');
@@ -493,7 +647,7 @@
         renderWriting(0);
     }
 
-    // ========= 初始化 =========
+    // ===== 初始化 =====
     document.addEventListener('DOMContentLoaded', () => {
         updateCurrentUserDisplay();
         loadUserProgress();
