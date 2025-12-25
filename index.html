@@ -5,495 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英語 B1→B2 進階學習平台</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background-color: #FFFEF8;
-            color: #3D3D3D;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #F5E8D9 0%, #FDD9BE 100%);
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-left h1 {
-            font-size: 28px;
-            color: #A89968;
-            margin-bottom: 5px;
-        }
-
-        .header-right {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .date-display {
-            font-size: 14px;
-            color: #6B6B6B;
-        }
-
-        .user-section {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .user-name {
-            font-weight: bold;
-            color: #A89968;
-        }
-
-        button {
-            background-color: #F5C197;
-            color: #3D3D3D;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        button:hover {
-            background-color: #F0B8A8;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .section {
-            background-color: #F5E8D9;
-            margin: 20px 0;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 5px solid #F5C197;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .section h2 {
-            color: #A89968;
-            margin-bottom: 20px;
-            font-size: 22px;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .tab {
-            padding: 12px 18px;
-            background-color: #FDD9BE;
-            color: #3D3D3D;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .tab.active {
-            background-color: #F5C197;
-            color: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .stat-card {
-            background-color: #FFF5E6;
-            padding: 15px;
-            border-radius: 8px;
-            border: 2px solid #FDD9BE;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 28px;
-            font-weight: bold;
-            color: #F5C197;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: #6B6B6B;
-            margin-top: 5px;
-        }
-
-        .vocabulary-card {
-            background-color: #FFF5E6;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            border-left: 4px solid #F0B8A8;
-        }
-
-        .vocab-word {
-            font-size: 18px;
-            font-weight: bold;
-            color: #A89968;
-            margin-bottom: 5px;
-        }
-
-        .vocab-pronunciation {
-            color: #9B8B7E;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-
-        .vocab-meaning {
-            color: #3D3D3D;
-            margin-bottom: 8px;
-        }
-
-        .vocab-example {
-            color: #6B6B6B;
-            font-size: 13px;
-            font-style: italic;
-            margin-top: 8px;
-        }
-
-        .play-btn {
-            background-color: #F0B8A8;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .play-btn:hover {
-            background-color: #F5C197;
-        }
-
-        .play-btn.playing {
-            background-color: #A89968;
-            animation: pulse 0.6s;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        .grammar-exercise {
-            background-color: #FFF5E6;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border-left: 4px solid #F0B8A8;
-        }
-
-        .grammar-question {
-            font-weight: bold;
-            color: #3D3D3D;
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
-
-        .options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .option-btn {
-            padding: 10px;
-            background-color: #FDD9BE;
-            color: #3D3D3D;
-            border: 2px solid transparent;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .option-btn:hover {
-            border-color: #F5C197;
-        }
-
-        .option-btn.correct {
-            background-color: #C9A876;
-            color: white;
-            border-color: #A89968;
-        }
-
-        .option-btn.incorrect {
-            background-color: #F0B8A8;
-            color: white;
-            border-color: #D9967D;
-        }
-
-        .explanation {
-            background-color: #F9F6F0;
-            padding: 10px;
-            border-radius: 6px;
-            margin-top: 10px;
-            font-size: 13px;
-            color: #6B6B6B;
-            display: none;
-        }
-
-        .explanation.show {
-            display: block;
-        }
-
-        .writing-exercise {
-            background-color: #FFF5E6;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #F0B8A8;
-        }
-
-        .exercise-title {
-            font-weight: bold;
-            color: #A89968;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .exercise-content {
-            color: #3D3D3D;
-            margin-bottom: 12px;
-        }
-
-        .exercise-hint {
-            background-color: #F9F6F0;
-            padding: 8px;
-            border-radius: 6px;
-            margin-bottom: 12px;
-            font-size: 13px;
-            color: #6B6B6B;
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 120px;
-            padding: 12px;
-            border: 2px solid #FDD9BE;
-            border-radius: 6px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            color: #3D3D3D;
-            resize: vertical;
-            margin-bottom: 12px;
-        }
-
-        textarea:focus {
-            outline: none;
-            border-color: #F5C197;
-            box-shadow: 0 0 8px rgba(245, 193, 151, 0.3);
-        }
-
-        .word-counter {
-            font-size: 12px;
-            color: #6B6B6B;
-            margin-bottom: 12px;
-        }
-
-        .submit-btn {
-            background-color: #C9A876;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #A89968;
-        }
-
-        .feedback {
-            background-color: #F9F6F0;
-            padding: 12px;
-            border-radius: 6px;
-            margin-top: 12px;
-            font-size: 14px;
-            color: #3D3D3D;
-            display: none;
-        }
-
-        .feedback.show {
-            display: block;
-        }
-
-        .success {
-            background-color: #E8F5E9;
-            border-left: 4px solid #81C784;
-            color: #2E7D32;
-        }
-
-        .info {
-            background-color: #E3F2FD;
-            border-left: 4px solid #64B5F6;
-            color: #1565C0;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal.show {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #F5E8D9;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .modal-content h3 {
-            color: #A89968;
-            margin-bottom: 15px;
-        }
-
-        .modal-content input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 2px solid #FDD9BE;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-
-        .modal-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-        }
-
-        .user-list {
-            max-height: 200px;
-            overflow-y: auto;
-            margin-bottom: 15px;
-        }
-
-        .user-item {
-            padding: 10px;
-            background-color: #FFF5E6;
-            border-radius: 6px;
-            margin-bottom: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .user-item:hover {
-            background-color: #FDD9BE;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .section {
-                padding: 15px;
-            }
-
-            .tabs {
-                flex-direction: column;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif; background-color:#FFFEF8; color:#3D3D3D; line-height:1.6; }
+        header { background:linear-gradient(135deg,#F5E8D9 0%,#FDD9BE 100%); padding:20px; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+        h1 { font-size:24px; color:#A89968; }
+        .header-right { display:flex; gap:15px; align-items:center; }
+        .user-name { font-weight:bold; color:#A89968; font-size:14px; }
+        button { background-color:#F5C197; color:#3D3D3D; border:none; padding:10px 15px; border-radius:6px; cursor:pointer; font-size:14px; font-weight:500; transition:all 0.3s ease; }
+        button:hover { background-color:#F0B8A8; }
+        .container { max-width:1200px; margin:0 auto; padding:20px; }
+        .section { background-color:#F5E8D9; margin:20px 0; padding:25px; border-radius:10px; border-left:5px solid #F5C197; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+        .section h2 { color:#A89968; margin-bottom:20px; font-size:22px; }
+        .tabs { display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap; }
+        .tab { padding:12px 18px; background-color:#FDD9BE; color:#3D3D3D; border:none; border-radius:6px; cursor:pointer; font-weight:500; transition:all 0.3s ease; }
+        .tab.active { background-color:#F5C197; color:white; }
+        .tab-content { display:none; }
+        .tab-content.active { display:block; }
+        .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:15px; }
+        .stat-card { background-color:#FFF5E6; padding:15px; border-radius:8px; border:2px solid #FDD9BE; text-align:center; }
+        .stat-number { font-size:28px; font-weight:bold; color:#F5C197; }
+        .stat-label { font-size:13px; color:#6B6B6B; margin-top:5px; }
+        .learning-blocks { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+        .learning-block { background-color:#FFF5E6; padding:20px; border-radius:8px; border-left:4px solid #F0B8A8; }
+        .block-title { font-weight:bold; color:#A89968; margin-bottom:8px; }
+        .block-content { color:#6B6B6B; font-size:14px; }
+        .vocab-card { background-color:#FFF5E6; padding:15px; border-radius:8px; margin-bottom:12px; border-left:4px solid #F0B8A8; }
+        .vocab-word { font-size:16px; font-weight:bold; color:#A89968; }
+        .vocab-pronunciation { color:#9B8B7E; font-size:12px; }
+        .vocab-meaning { color:#3D3D3D; margin-top:5px; }
+        .vocab-example { color:#6B6B6B; font-size:12px; font-style:italic; margin-top:5px; }
+        .play-btn { background-color:#F0B8A8; color:white; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; font-size:12px; margin-top:8px; }
+        .grammar-q { background-color:#FFF5E6; padding:15px; border-radius:8px; margin-bottom:15px; border-left:4px solid #F0B8A8; }
+        .q-text { font-weight:bold; color:#3D3D3D; margin-bottom:12px; }
+        .options { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin-bottom:10px; }
+        .opt-btn { padding:10px; background-color:#FDD9BE; color:#3D3D3D; border:2px solid transparent; border-radius:6px; cursor:pointer; }
+        .opt-btn:hover { border-color:#F5C197; }
+        .opt-btn.correct { background-color:#C9A876; color:white; }
+        .explain { background-color:#F9F6F0; padding:10px; border-radius:6px; margin-top:8px; font-size:12px; color:#6B6B6B; display:none; }
+        .explain.show { display:block; }
+        .writing-ex { background-color:#FFF5E6; padding:15px; border-radius:8px; border-left:4px solid #F0B8A8; }
+        .ex-label { font-weight:bold; color:#A89968; margin-bottom:10px; }
+        .ex-content { color:#3D3D3D; margin-bottom:12px; font-size:14px; }
+        .ex-hint { background-color:#F9F6F0; padding:8px; border-radius:6px; margin-bottom:12px; font-size:12px; color:#6B6B6B; }
+        textarea { width:100%; min-height:120px; padding:12px; border:2px solid #FDD9BE; border-radius:6px; font-size:14px; color:#3D3D3D; margin-bottom:10px; }
+        textarea:focus { outline:none; border-color:#F5C197; }
+        .word-count { font-size:12px; color:#6B6B6B; margin-bottom:12px; }
+        .submit-btn { background-color:#C9A876; color:white; padding:10px 20px; }
+        .submit-btn:hover { background-color:#A89968; }
+        .feedback { background-color:#F9F6F0; padding:12px; border-radius:6px; margin-top:12px; font-size:13px; display:none; }
+        .feedback.show { display:block; }
+        .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); justify-content:center; align-items:center; }
+        .modal.show { display:flex; }
+        .modal-content { background-color:#F5E8D9; padding:30px; border-radius:10px; max-width:400px; width:90%; }
+        .modal-content h3 { color:#A89968; margin-bottom:15px; }
+        .modal-content input { width:100%; padding:10px; margin-bottom:15px; border:2px solid #FDD9BE; border-radius:6px; font-size:14px; }
+        .modal-btns { display:flex; gap:10px; justify-content:flex-end; }
+        .user-list { max-height:200px; overflow-y:auto; margin-bottom:15px; }
+        .user-item { padding:10px; background-color:#FFF5E6; border-radius:6px; margin-bottom:8px; cursor:pointer; }
+        .user-item:hover { background-color:#FDD9BE; }
+        @media (max-width:768px) { header { flex-direction:column; gap:10px; } .learning-blocks { grid-template-columns:1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-left">
-            <h1>🌍 英語 B1→B2 進階學習平台</h1>
-        </div>
+        <div><h1>🌍 英語 B1→B2 進階學習平台</h1></div>
         <div class="header-right">
-            <div class="date-display" id="dateDisplay"></div>
-            <div class="user-section">
-                <span class="user-name" id="currentUser">未登入</span>
-                <button onclick="openUserModal()">👤 切換用戶</button>
-            </div>
+            <span class="user-name" id="currentUser">未登入</span>
+            <button onclick="openUserModal()">切換用戶</button>
         </div>
     </header>
 
     <div class="container">
-        <!-- 統計卡片 -->
+        <!-- 統計 -->
         <div class="section">
             <h2>📊 學習進度統計</h2>
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number" id="studyDays">0</div>
-                    <div class="stat-label">學習天數</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="consecutiveDays">0</div>
-                    <div class="stat-label">連續天數</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="vocabularyCount">0</div>
-                    <div class="stat-label">學習單字</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="writingCount">0</div>
-                    <div class="stat-label">完成寫作</div>
-                </div>
+                <div class="stat-card"><div class="stat-number" id="studyDays">0</div><div class="stat-label">學習天數</div></div>
+                <div class="stat-card"><div class="stat-number" id="consecutiveDays">0</div><div class="stat-label">連續天數</div></div>
+                <div class="stat-card"><div class="stat-number" id="vocabularyCount">0</div><div class="stat-label">學習單字</div></div>
+                <div class="stat-card"><div class="stat-number" id="writingCount">0</div><div class="stat-label">完成寫作</div></div>
             </div>
         </div>
 
-        <!-- 5-5-5 學習方法 -->
+        <!-- 5-5-5方法 -->
         <div class="section">
-            <h2>⏱️ 5-
+            <h2>⏱️ 5-5-5 日常學習方法</h2>
+            <div class="learning-blocks">
+                <div class="learning-block"><div class="block-title">👂 聽力輸入 (5分鐘)</div><div class="block-content">• 播放英文媒體<br>• 聽力練習<br>• 字幕跟讀</div></div>
+                <div class="learning-block"><div class="block-title">🗣️ 口說輸出 (5分鐘)</div><div class="block-content">• 跟讀練習<br>• 自由演講<br>• 對話練習</div></div>
+                <div class="learning-block"><div class="block-title">✍️ 寫作整合 (5分鐘)</div><div class="block-content">• 微寫作<br>• 句子組織<br>• 段落練習</div></div>
+            </div>
+        </div>
+
+        <!-- 每週主題 -->
+        <div class="section">
+            <h2>📅 每週學習主題計劃</h2>
+            <div class="learning-blocks">
+                <div class="learning-block"><div class="block-title">星期一</div><div class="block-content">商務英文 - Email、會議用語</div></div>
+                <div class="learning-block"><div class="block-title">星期二</div><div class="block-content">日常對話 - 購物、餐廳、生活</div></div>
+                <div class="learning-block"><div class="block-title">星期三</div><div class="block-content">閱讀日 - 新聞、部落格、文章</div></div>
+                <div class="learning-block"><div class="block-title">星期四</div><div class="block-content">寫作集中 - 短文、論文、段落</div></div>
+                <div class="learning-block"><div class="block-title">星期五</div><div class="block-content">口說練習 - 演講、討論、辯論</div></div>
+                <div class="learning-block"><div class="block-title">星期六</div><div class="block-content">混合複習 - 各項技能整合</div></div>
+                <div class="learning-block"><div class="block-title">星期日</div><div class="block-content">週評測 - 進度檢視與調整</div></div>
+            </div>
+        </div>
+
+        <!-- B2詞彙 -->
+        <div class="section">
+            <h2>📚 B2 進階詞彙學習</h2>
+            <div id="vocabularyContainer"></div>
+        </div>
+
+        <!-- 文法 -->
+        <div class="section">
+            <h2>📖 B2 進階文法學習</h2>
+            <div class="tabs" id="grammarTabs"></div>
+            <div id="grammarContent"></div>
+        </div>
+
+        <!-- 寫作 -->
+        <div class="section">
+            <h2>✍️ 寫作練習工作區</h2>
+            <div class="tabs" id="writingTabs">
+                <button class="tab active" onclick="switchWritingTab(0)">級別1：句子組合</button>
+                <button class="tab" onclick="switchWritingTab(1)">級別2：段落寫作</button>
+                <button class="tab" onclick="switchWritingTab(2)">級別3：短文創作</button>
+            </div>
+            <div id="writingContent"></div>
+        </div>
+    </div>
+
+    <!-- 用戶模態 -->
+    <div class="modal" id="userModal">
+        <div class="modal-content">
+            <h3>用戶管理</h3>
+            <div class="user-list" id="userList"></div>
+            <input type="text" id="newUserInput" placeholder="輸入新用戶名稱">
+            <div class="modal-btns">
+                <button onclick="closeUserModal()">取消</button>
+                <button onclick="addNewUser()" class="submit-btn">創建用戶</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 文法數據
+        const grammarData = [
+            { topic: '現在完成式 vs 過去完成式', questions: [
+                { q: 'I _____ in this city for 10 years.', opts: ['lived','have lived','had lived','was living'], ans
